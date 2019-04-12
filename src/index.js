@@ -1,4 +1,5 @@
 import $ from "jquery";
+import slider from "./js/slider.js";
 
 import "./scss/style.scss"; 
 
