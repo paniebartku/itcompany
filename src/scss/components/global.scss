@@ -11,14 +11,17 @@
 	display: inline-block!important;
 }
 
-.slider--container {
 
+.slider--container {
+	position: relative;
 	width: 100%;
 	.slider--view {
 		display: block;
 		width: 100%;
 		margin: 0 auto;
 		overflow: hidden;
+		position: relative;
+		max-height: 660px;
 		ul {
 			white-space: nowrap;
 			text-align: center;
@@ -31,7 +34,8 @@
 				display: none;
 				width: 100%;
 				position: relative;
-			
+
+				
 			}
 		}
 	}
@@ -65,3 +69,25 @@
 		}
 	}
 }
+
+.dots {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%)
+  }
+
+  .dots span {
+	display: inline-block;
+	background-color: #000;
+	margin: 0 20px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px white;
+
+	// .is-active {
+	// 	box-shadow: 0 0 0 5px white, 0 0 3px 10px red!important;
+	//   }
+  }
+.dots span.is-active {box-shadow: 0 0 0 5px white, 0 0 3px 10px red!important;}
