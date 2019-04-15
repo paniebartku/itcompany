@@ -4,10 +4,14 @@ class Functions {
 
         $this->add_actions();
         $this->add_filters();
+        $this->theme_setup();
         
     }
 
- 
+    public function theme_setup() {
+        add_action( 'after_setup_theme', array( $this, 'theme_setup_core' ) );
+    }
+
     public function theme_setup_core() {
         add_theme_support( 'menus' );
         register_nav_menu( 'primary', 'Primary menu' );
@@ -50,7 +54,7 @@ class Functions {
             'public' => true,
             'has_archive' => true,
             'menu_icon'   => 'dashicons-image-filter',
-            'supports' => array('title', 'thumbnail')
+            'supports' => array('title', 'thumbnail', 'editor')
         ));
     }
 
