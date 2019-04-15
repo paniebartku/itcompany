@@ -31,9 +31,7 @@ if ($query->have_posts()) :
        
         ?>
                         <li style="background-image: url('<?php echo $image[0]; ?>');" class="slider--view__slides <?php echo ($i === 1 ? ' is-active' : '' ); ?> ">
-                          <img src="<?php //echo $image[0]; ?>"/> 
-                      
-                            <h2></h2>
+                            <h2><?php echo get_field('slider_title'); ?></h2>
                             <h3></h3>                            
                         </li>
                      
@@ -56,7 +54,7 @@ if ($query->have_posts()) :
     endwhile;  ?>
     
     </div>   <?php
-	echo '</ul></div><div class="slider--arrows"><span class="arrow slider--arrows__left">&#x3c;</span><span class="arrow slider--arrows__right">&#x3e;</span></div></div></div>';
+	echo '</ul></div><div class="slider--arrows"><span class="arrow slider--arrows__left"></span><span class="arrow slider--arrows__right"></span></div></div></div>';
 endif;
 
 wp_reset_postdata();
@@ -64,6 +62,13 @@ wp_reset_postdata();
    
 </section>
 <style>
-                     .slider--view__slides {background-size: cover; height: 600px;}
+                     .slider--view__slides {
+        background-size: cover;
+        height: 0;
+        padding-top: 50%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;}
                     </style>
 

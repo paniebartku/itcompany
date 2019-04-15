@@ -1,0 +1,100 @@
+.block-slider__wrapper {
+	position: relative;
+	margin: 0 auto;
+    max-width: 100%;
+    
+    .slider--container {
+        position: relative;
+        width: 100%;
+        .slider--view {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            ul {
+                white-space: nowrap;
+                text-align: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                transition: transform 0.25s ease-out;
+                .slider--view__slides {
+                    white-space: normal;
+                    display: none;
+                    width: 100%;
+                    position: relative;
+                    img {height: auto; max-width: 100%;}
+                    h2{position: absolute; top:30%; left:0; right:0;}
+                                        
+                        &.is-active {
+                            display: inline-block;
+                        }
+                }
+            }
+        }
+        .slider--arrows {
+            width: 100%;
+            margin: 0 auto;
+            span {
+                position: absolute;
+                top: 50%;
+                width: 50px;
+                height: 50px;
+                background: transparent;
+                border-top: 3px solid white;
+                border-right: 3px solid white;
+                box-shadow: 0 0 0 lightgray;
+                transition: all 200ms ease;
+                cursor: pointer;
+                &.slider--arrows__left {
+                    left: 140px;
+                    transform: translate3d(0,-50%,0) rotate(-135deg);
+                 
+                }
+                &.slider--arrows__right {
+                    right: 140px;
+                    transform: translate3d(0,-50%,0) rotate(45deg);
+                }
+                &:hover {
+                    border-color: $itGreen;
+                    //box-shadow: 0px 0px -20px 2px  rgba(255,255,255,1);
+                    backface-visibility: hidden;
+                }
+                
+                &:before { // for better hit area
+                    content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%,-60%) rotate(45deg);
+            width: 200%;
+            height: 200%;
+                }
+            }
+        }
+    }
+}
+
+
+.dots {
+	position: absolute;
+	bottom: 25%;
+    left: 20%;
+	transform: translateX(-50%)
+  }
+
+  .dots span {
+	display: inline-block;
+	background-color: white;
+	margin: 0 14px;
+	width: 10px; 
+	height: 10px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1px white;
+
+	&.is-active {
+        background-color: $itGreen;
+        box-shadow: 0 0 0 1px $itGreen;
+	  }
+  }
