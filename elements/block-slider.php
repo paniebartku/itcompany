@@ -31,7 +31,9 @@ if ($query->have_posts()) :
        
         ?>
                         <li style="background-image: url('<?php echo $image[0]; ?>');" class="slider--view__slides <?php echo ($i === 1 ? ' is-active' : '' ); ?> ">
-                            <h2><?php echo get_field('slider_title'); ?></h2>
+                            <div class="slider--view__title">
+                                <h2><?php echo get_field('slider_title'); ?></h2>
+                            </div>
                             <h3></h3>                            
                         </li>
                      
@@ -61,14 +63,3 @@ wp_reset_postdata();
 ?>
    
 </section>
-<style>
-                     .slider--view__slides {
-        background-size: cover;
-        height: 0;
-        padding-top: 50%;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;}
-                    </style>
-

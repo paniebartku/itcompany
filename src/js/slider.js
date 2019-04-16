@@ -7,7 +7,7 @@ const dots = [...document.querySelectorAll('.dots span')];
 const arrowLeft = document.querySelector('.slider--arrows__left');
 const arrowRight = document.querySelector('.slider--arrows__right');
 
-const time = 7000;
+const time = 999999000;
 let active = 0;
 
 const changeSlide = () => {
