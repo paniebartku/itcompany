@@ -33,7 +33,12 @@ if ($query->have_posts()) :
                         <li style="background-image: url('<?php echo $image[0]; ?>');" class="slider--view__slides <?php echo ($i === 1 ? ' is-active' : '' ); ?> ">
                             <div class="slider--view__title">
                                 <h2><?php echo get_field('slider_title'); ?></h2>
+                                <p>Lorem ipsum dolor sit amet</p>
+                                <a href="" class="button button--slider">Zobacz</a>
                             </div>
+                            
+                             
+                           
                             <h3></h3>                            
                         </li>
                      
