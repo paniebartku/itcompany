@@ -1,4 +1,5 @@
 <?php 
+
 class Functions {
     public function __construct() {
 
@@ -21,7 +22,8 @@ class Functions {
 
     public function add_actions() {
         add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts_and_styles' ) );
-        add_action( 'init', array( $this, 'home_page_slider' ) );      
+        add_action( 'init', array( $this, 'home_page_slider_post_type' ) );   
+        add_action( 'init', array( $this, 'case_studies_post_type' ) );     
     }
 
     public function add_filters(){
@@ -33,7 +35,7 @@ class Functions {
         wp_enqueue_script('itcompany_js', get_template_directory_uri() . '/dist/dist.min.js', array('jquery'),  '1.0.0', true);
     }
 
-    public function home_page_slider(){
+    public function home_page_slider_post_type(){
        
         register_post_type( 'slider',
             array(
@@ -58,7 +60,36 @@ class Functions {
         ));
     }
 
+    public function case_studies_post_type(){
+       
+        register_post_type( 'case-studies',
+            array(
+            'labels' => array(
+                'name' => __( 'Case Studies' ),
+                'singular_name' => __( 'Case Study' ),
+                'add_new' => __( 'Add New' ),
+                'add_new_item' => __( 'Add New Case Study' ),
+                'edit' => __( 'Edit' ),
+                'edit_item' => __( 'Edit Case Study' ),
+                'new_item' => __( 'New Case Study' ),
+                'view' => __( 'View Case Study' ),
+                'view_item' => __( 'View Case Study' ),
+                'search_items' => __( 'Search Case Study' ),
+                'not_found' => __( 'No Case Studies found' ),
+                'not_found_in_trash' => __( 'No Case Studies found in Trash' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon'   => 'dashicons-image-filter',
+            'supports' => array('title', 'editor')
+        ));
+    }
+
     
 }
 
 $functions = new Functions;
+require get_template_directory() . '/inc/class.ACFfunctions.php';
+
+
+

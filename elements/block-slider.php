@@ -1,7 +1,3 @@
-
-
-
-
 <section class="block-slider">
 <?php
 $args = array(
