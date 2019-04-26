@@ -14,16 +14,18 @@
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
             <div class="col-lg-4">
-                <div class="block-cs__loop--image">
-                
-
-                <?php
-                $elo = image_acf(get_field('cs-logo'));
-                do_action('unique_action_tag', $elo );
-                ?>
-             
+                <div class="block-cs__loop--card">
+                    <div class="block-cs__loop--image">
+                    <?php
+                    $image = image_acf(get_field('cs-logo'));
+                    do_action('unique_action_tag', $image );
+                    ?>
+                    </div>
+                    <blockquote><?php echo get_field('cs-excerpt') ?></blockquote>
+                    <div class="block-cs__loop--author">
+                        <span><?php echo get_field('cs-person') ?></span>
+                    </div>
                 </div>
-                <blockquote><?php echo get_field('cs-excerpt') ?></blockquote>
             </div>
           
         <?php endwhile; 

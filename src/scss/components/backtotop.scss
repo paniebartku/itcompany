@@ -14,7 +14,7 @@
 
     &:hover {
         transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
-        background-color: #262121;
+        background-color: $itDark;
     }
     &.hidden{
         opacity: 0; 

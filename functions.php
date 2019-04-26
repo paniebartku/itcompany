@@ -23,7 +23,10 @@ class Functions {
     public function add_actions() {
         add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts_and_styles' ) );
         add_action( 'init', array( $this, 'home_page_slider_post_type' ) );   
-        add_action( 'init', array( $this, 'case_studies_post_type' ) );     
+        add_action( 'init', array( $this, 'case_studies_post_type' ) );   
+        add_action( 'admin_menu', array($this,'itcompany_add_admin_page') );  
+        add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
+        
     }
 
     public function add_filters(){
@@ -85,11 +88,42 @@ class Functions {
         ));
     }
 
+    function itcompany_add_admin_page() {
+        add_menu_page( 'IT Admin Theme Options', 'IT Admin', 'manage_options', 'itcompany_options', 'itcompany_theme_create_page');
+        add_submenu_page( 'itcompany_options', 'IT Admin Theme Options', 'General', 'manage_options', 'itcompany_options', 'itcompany_theme_create_page' );
+    }
+    	
+function itcompany_custom_settings() {
+	register_setting( 'itcompany-settings-group', 'facebook' );
+	add_settings_section( 'itcompany-socials-options', 'Your social media links', 'itcompany_socials_options', 'itcompany_options');
+	add_settings_field( 'sidebar-name', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
+}
+
+
+
+
+
     
 }
 
 $functions = new Functions;
+require get_template_directory() . '/inc/class.Walker.php';
+require get_template_directory() . '/inc/class.PrimaryMenu.php';
 require get_template_directory() . '/inc/class.ACFfunctions.php';
 
 
 
+
+
+
+
+function itcompany_socials_name() {
+	$facebookLink = esc_attr( get_option( 'facebook' ) );
+	echo '<input type="text" name="facebook" value="'.$facebookLink.'" placeholder="Facebook" />';
+}
+function itcompany_theme_create_page() {
+	require_once( get_template_directory() . '/inc/itcompany-admin.php' );
+}
+function itcompany_socials_options() {
+	echo 'Just paste and save :)';
+}

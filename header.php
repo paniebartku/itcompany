@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
       <?php
         $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -21,7 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-
+        <?php do_action('primary_nav'); ?>
       </div>
     </nav>
 </header> 
