@@ -12,7 +12,8 @@
     <?php   $loop = new WP_Query( array( 'post_type' => 'case-studies'));
         if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
+            <?php $featured = get_field('featured_post');
+            if($featured == true){ ?>
             <div class="col-lg-4">
                 <div class="block-cs__loop--card">
                     <div class="block-cs__loop--image">
@@ -27,6 +28,7 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
           
         <?php endwhile; 
        endif;
