@@ -9,7 +9,11 @@
 </head>
 <body>
 <header>
+    
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="upperinfo fixed-top">
+      <p>lorem ipsum</p>
+    </div>
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
       <?php
         $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -23,5 +27,8 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <?php do_action('primary_nav'); ?>
       </div>
+      <span class="navbar-text">
+          <img src="<?php echo get_template_directory_uri();?>/src/partner.jpg"/>
+    </span>
     </nav>
 </header> 

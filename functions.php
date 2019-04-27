@@ -26,6 +26,7 @@ class Functions {
         add_action( 'init', array( $this, 'case_studies_post_type' ) );   
         add_action( 'admin_menu', array($this,'itcompany_add_admin_page') );  
         add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
+        add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
         
     }
 
@@ -94,13 +95,50 @@ class Functions {
     }
     	
 function itcompany_custom_settings() {
-	register_setting( 'itcompany-settings-group', 'facebook' );
+    register_setting( 'itcompany-settings-group', 'facebook' );
 	add_settings_section( 'itcompany-socials-options', 'Your social media links', 'itcompany_socials_options', 'itcompany_options');
-	add_settings_field( 'sidebar-name', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
+    add_settings_field( 'sidebar-name', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
 }
 
 
-
+public function footer_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'Footer sidebar 1'),
+        'id' => 'footer-sidebar-1',
+        'description' => __( 'First footer sidebar'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer-main__sidebar-title">',
+        'after_title'   => '</h3>',
+        ) );
+    register_sidebar( array(
+        'name' => __( 'Footer sidebar 2'),
+        'id' => 'footer-sidebar-2',
+        'description' => __( 'Second footer sidebar'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer-main__sidebar-title">',
+        'after_title'   => '</h3>',
+        ) );
+    register_sidebar( array(
+        'name' => __( 'Footer sidebar 3'),
+        'id' => 'footer-sidebar-3',
+        'description' => __( 'Third footer sidebar'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer-main__sidebar-title">',
+        'after_title'   => '</h3>',
+        ) );
+    register_sidebar( array(
+        'name' => __( 'Footer sidebar 4'),
+        'id' => 'footer-sidebar-4',
+        'description' => __( 'Fourth footer sidebar'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer-main__sidebar-title">',
+        'after_title'   => '</h3>',
+        ) );    
+}
 
 
     
@@ -110,10 +148,6 @@ $functions = new Functions;
 require get_template_directory() . '/inc/class.Walker.php';
 require get_template_directory() . '/inc/class.PrimaryMenu.php';
 require get_template_directory() . '/inc/class.ACFfunctions.php';
-
-
-
-
 
 
 

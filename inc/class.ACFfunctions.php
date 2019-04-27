@@ -10,8 +10,6 @@ class ACFfunctions extends Functions {
                 echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'"/>';
             }
         }
-
-
     }   
  
 }

@@ -1,3 +1,36 @@
 .navbar {
     background: white;
+    .upperinfo {
+        display: flex;
+        justify-content: right;
+    }
+   
 }
+
+.scrolled {
+    img{
+        @include transition;
+        transform:scale(0.7);
+    }
+}
+.scrolledAgain {
+    img{
+        transform:scale(1.0);
+        @include transition;
+    }
+}
+
+
+.navbar-text {
+    img {
+        height: auto; max-width: 100%;
+    }
+    
+}
+@media(max-width:991px){
+    .navbar-text {display: none;}
+}
+
+@mixin transition {
+    transition: all 0.3s ease;
+  }
