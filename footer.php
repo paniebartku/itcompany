@@ -6,22 +6,22 @@
                 <div class="col-xl-3 col-md-6">
                 <?php if( is_active_sidebar( 'footer-sidebar-1' ) ){ 
                   dynamic_sidebar( 'footer-sidebar-1' );
-                  }else {echo '<p>Write something</p>';}?>
+                  }else {echo '';}?>
                 </div>
                 <div class="col-xl-3 col-md-6">
                     <?php if( is_active_sidebar( 'footer-sidebar-2' ) ){ 
                   dynamic_sidebar( 'footer-sidebar-2' );
-                  }else {echo '<p>Write something</p>';}?>
+                  }else {echo '';}?>
                 </div>
                 <div class="col-xl-3 col-md-6">
                     <?php if( is_active_sidebar( 'footer-sidebar-3' ) ){ 
                   dynamic_sidebar( 'footer-sidebar-3' );
-                  }else {echo '<p>Write something</p>';}?>
+                  }else {echo '';}?>
                 </div>
                 <div class="col-xl-3 col-md-6">
                     <?php if( is_active_sidebar( 'footer-sidebar-4' ) ){ 
                   dynamic_sidebar( 'footer-sidebar-4' );
-                  }else {echo '<p>Write something</p>';}?>
+                  }else {echo '';}?>
                 </div>
             </div>
         </div>

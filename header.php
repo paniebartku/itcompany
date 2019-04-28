@@ -12,7 +12,10 @@
     
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
     <div class="upperinfo fixed-top">
-      <p>lorem ipsum</p>
+    
+          <!-- <span class="phone">Tel. 666 77 888</span>
+          <span class="email">itadmin@itadmin.pl</span> -->
+       
     </div>
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
       <?php

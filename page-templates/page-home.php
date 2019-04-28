@@ -5,6 +5,7 @@
 get_header();
 
 get_template_part('elements/block-slider');
+get_template_part('elements/block-solutions');
 get_template_part('elements/block-case-studies');
 ?>
 

@@ -3,6 +3,7 @@
     .upperinfo {
         display: flex;
         justify-content: right;
+        
     }
    
 }
@@ -12,16 +13,24 @@
         @include transition;
         transform:scale(0.7);
     }
+   
+    @include transition;
+    padding: 0 1rem;
+   
 }
 .scrolledAgain {
     img{
         transform:scale(1.0);
         @include transition;
     }
+    @include transition;
+    padding: 0.5rem 1rem;
+    
 }
 
 
 .navbar-text {
+    margin-top: 12px;
     img {
         height: auto; max-width: 100%;
     }

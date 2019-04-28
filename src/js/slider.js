@@ -7,7 +7,7 @@ const dots = [...document.querySelectorAll('.dots span')];
 const arrowLeft = document.querySelector('.slider--arrows__left');
 const arrowRight = document.querySelector('.slider--arrows__right');
 
-const time = 8000;
+const time = 800000;
 let active = 0;
 
 const changeSlide = () => {
@@ -65,6 +65,7 @@ arrowLeft.addEventListener('click', () => {
     clearInterval(indexInterval);
     changeActiveBack();
 });
+
 
 
 })(); 
