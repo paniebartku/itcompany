@@ -12,7 +12,26 @@ const sameHeight = (() => {
 	 }
     for(let i = 0; i < blockquotes.length; i++){
         blockquotes[i].style.height = tallest + "px";
-    }
+	}
+
+
+
+	window.addEventListener('resize', ()=>{
+	
+		for(let i = 0; i < blockquotes.length; i++){
+			
+			let element = blockquotes[i];
+			element.style.height = '';
+			let elementHeight = element.offsetHeight;
+			
+			console.log(elementHeight);
+			tallest = (elementHeight>tallest ? elementHeight : tallest); 
+			
+			blockquotes[i].style.height = tallest + "px";
+			console.log(elementHeight);
+		 }
+	
+	})
 })();
  
 export default sameHeight; 

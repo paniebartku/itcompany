@@ -25,6 +25,7 @@
                     <blockquote><?php echo get_field('cs-excerpt') ?></blockquote>
                     <div class="block-cs__loop--author">
                         <span><?php echo get_field('cs-person') ?></span>
+                        <span><?php echo get_field('cs-job') ?></span>
                     </div>
                 </div>
             </div>

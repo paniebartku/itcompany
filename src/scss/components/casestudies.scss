@@ -31,5 +31,9 @@
                 margin-top: -0.5rem;
             }
         }
+        &--author {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
