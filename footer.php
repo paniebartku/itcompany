@@ -35,11 +35,10 @@
                     </p>                           
                 </div>
                 <div class="col-sm-6">
-                    <?php 
-                    $facebookLink = esc_attr( get_option( 'facebook' ) ); 
-                    ?>
+                    <div class="footer-additional__socials">
+                    <?php $facebookLink = esc_attr( get_option( 'facebook' ) ); ?>
                     <a href="<?php echo $facebookLink ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
-                    
+                    </div>
                 </div>
             </div>
         </div>

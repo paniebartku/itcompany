@@ -1,8 +1,41 @@
 footer {
     .footer-main {
+    padding: 2rem 0;    
     background-color: #4c4c4c;
+        h3 {
+            color: white;
+        }
     }
     .footer-additional {
+    color: $itCreme;    
     background-color: #424242;
+    padding: 1rem 0;
+        &__socials {
+            display: flex;
+            justify-content: right;
+            a {color: $itCreme;
+                transition: 0.3s;
+                &:hover{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+                border: 1px solid $itCreme;
+                width: 40px;
+                border-radius: 5px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s;
+                &:hover {border-color: white;}
+            }
+        }
+    p {
+        margin: 0.5rem 0 0 0;
+    }
     }
 }

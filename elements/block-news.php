@@ -1,7 +1,7 @@
 <section class="block-news">
     <div class="container">
-        <div class="row block-solutions__header">
-            
+        <div class="row block-news__header">
+            <h2>Aktualności</h2>
         </div>
     </div>    
 </section>
