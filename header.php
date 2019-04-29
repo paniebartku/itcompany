@@ -8,15 +8,26 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<header>
-    
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
-    <div class="upperinfo fixed-top">
-    
-          <!-- <span class="phone">Tel. 666 77 888</span>
-          <span class="email">itadmin@itadmin.pl</span> -->
-       
+<header class="fixed-top ">
+    <div class="upperinfo">
+      <?php 
+    $phoneNumber= esc_attr( get_option( 'phone' ) ); 
+    $email= esc_attr( get_option( 'email' ) ); 
+      ?>
+                  
+    <?php if(!empty($email)){?>
+    <span class="upperinfo__email"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $email; ?></span>
+    <?php } ?>
+    <?php if(!empty($phoneNumber)){?>
+    <span class="upperinfo__phone"><i class="fa fa-phone" aria-hidden="true"></i>tel. <?php echo $phoneNumber;?></span>
+    <?php } ?>
     </div>
+  
+       
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+ 
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
       <?php
         $custom_logo_id = get_theme_mod( 'custom_logo' );
