@@ -30,6 +30,7 @@ module.exports = {
   module: {
     rules: [
       // perform js babelization on all .js files
+      
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -74,6 +75,7 @@ module.exports = {
           { loader: "sass-loader", options: {sourceMap: true} },
         ]
       },
+      
       
     ]
   },

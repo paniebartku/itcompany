@@ -1,71 +1,72 @@
 .upperinfo {
-    display: flex;
-    justify-content: right;
-    background: white;
-    padding: 0.5rem 2.46rem 0 0;
-    &.scrolled {
-        //height: 0;
-        transform: translateY(-100%);
-        transition: transform 0.2s;
-        position: absolute;
-        
+  display: flex;
+  justify-content: right;
+  background: white;
+  padding: 0.5rem 2.46rem 0 0;
+  &.scrolled {
+    //height: 0;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    position: absolute;
+  }
+  span {
+    margin-left: 1rem;
+    i {
+      margin-right: 0.5rem;
     }
-    span {
-        margin-left:1rem;
-        i {margin-right:0.5rem;}
-    }
-    
+  }
 }
 
-
 .navbar {
-    background: white;
-    &-brand {
-        margin-top: -3rem;
-
-    }
- 
+  background: white;
+  &-brand {
+    margin-top: -3rem;
+  }
 }
 
 .scrolled {
-    .navbar-brand {margin-top:0;}
-    #navbarText {margin-top:0;}
-    img{
-        @include transition;
-        transform:scale(0.7);
-    }
-   
+  .navbar-brand {
+    margin-top: 0;
+  }
+  #navbarText {
+    margin-top: 0;
+  }
+  img {
     @include transition;
-    padding: 0 1rem;
-   
+    transform: scale(0.7);
+  }
+
+  @include transition;
+  padding: 0 1rem;
 }
 .scrolledAgain {
-    img{
-        transform:scale(1.0);
-        @include transition;
-    }
+  img {
+    transform: scale(1);
     @include transition;
-    padding: 0.5rem 1rem;
-    
+  }
+  @include transition;
+  padding: 0.5rem 1rem;
 }
 
 #navbarText {
-    margin-left:3rem;
-    margin-top: -2rem;
+  margin-left: 3rem;
+  margin-top: -2rem;
 }
 
 .navbar-text {
-    padding-bottom: 0.3125rem;
-    padding-top: 0.3125rem;
-    img {
-        height: auto; max-width: 100%;
-    }
-    
+  padding-bottom: 0.3125rem;
+  padding-top: 0.3125rem;
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 }
-@media(max-width:991px){
-    .navbar-text {display: none;}
+@media (max-width: 991px) {
+  .navbar-text {
+    display: none;
+  }
 }
 
 @mixin transition {
-    transition: all 0.3s ease;
-  }
+  transition: all 0.3s ease;
+}

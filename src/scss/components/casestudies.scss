@@ -1,39 +1,40 @@
 .block-cs {
-    padding-bottom: 3rem;
-    &__header {
-        justify-content: center;
-        margin-top:3.5rem;
-        margin-bottom: 3.5rem;
-        h2{font-size: 3rem;}
-        
+  padding-bottom: 3rem;
+  &__header {
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    h2 {
+      font-size: 3rem;
     }
+  }
 
-    &__loop {
-        &--card {
-            padding: 2.5rem 2.5rem 4rem 4.5rem;
-            box-shadow: 0 2px 20px 0 rgba(0,0,0,.15);
-            }
-        &--image {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        blockquote {
-            font-style: italic;
-            position: relative;
-            &::before {
-                content:"\201C";
-                position: absolute;
-                top: -1rem;
-                left: -1rem;
-                margin: 0;
-                font-family: Helvetica;
-                font-size: 2rem;
-                margin-top: -0.5rem;
-            }
-        }
-        &--author {
-            display: flex;
-            flex-direction: column;
-        }
+  &__loop {
+    &--card {
+      padding: 2.5rem 2.5rem 4rem 4.5rem;
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
     }
+    &--image {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    blockquote {
+      font-style: italic;
+      position: relative;
+      &::before {
+        content: "\201C";
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        margin: 0;
+        font-family: Helvetica;
+        font-size: 2rem;
+        margin-top: -0.5rem;
+      }
+    }
+    &--author {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
