@@ -7,7 +7,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // include the css extraction and minification plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const paths = {
     DIST: path.resolve(__dirname, 'dist'),
     SRC: path.resolve(__dirname, 'src')
@@ -85,6 +85,7 @@ module.exports = {
     ]
   },
   plugins: [
+    //new StyleLintPlugin(),
     // extract css into dedicated file
     new MiniCssExtractPlugin({
       filename: './dist.min.css',
