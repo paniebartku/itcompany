@@ -1,3 +1,4 @@
+/* eslint-disable */
 import $ from "jquery";
 import "popper.js";
 import "bootstrap/js/dist/util";

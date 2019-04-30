@@ -30,7 +30,12 @@ module.exports = {
   module: {
     rules: [
       // perform js babelization on all .js files
-      
+      {
+        enforce: 'pre',
+        exclude: /node_modules/,
+        test: /\.js$/,
+        loader: 'eslint-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
