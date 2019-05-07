@@ -4,12 +4,12 @@
 
 <div class="row block-cs__header">
   
-        <h2>Case Studies</h2>
+        <h2>Referencje</h2>
 
 
 </div>
     <div class="row block-cs__loop">
-    <?php   $loop = new WP_Query( array( 'post_type' => 'case-studies'));
+    <?php $loop = new WP_Query( array( 'post_type' => 'case-studies'));
         if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php $featured = get_field('featured_post');

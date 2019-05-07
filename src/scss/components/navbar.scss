@@ -18,8 +18,14 @@
 }
 .navbar {
   background: white;
+  padding: 1.5rem 1rem;
   &-brand {
     margin-top: -3rem;
+  }
+  @media(max-width:991px){
+    &-brand {
+      margin-top: -2rem;
+    }
   }
 }
 .scrolled {
@@ -44,9 +50,20 @@
   @include transition;
   padding: 0.5rem 1rem;
 }
+@media(max-width:991px){
+  .scrolledAgain {
+    padding: 1.5rem 1rem;
+  }
+}
 #navbarText {
   margin-left: 3rem;
   margin-top: -2rem;
+}
+@media(max-width:991px){
+  #navbarText {
+   
+    margin-top: 0;
+  }
 }
 .navbar-text {
   padding-bottom: 0.3125rem;

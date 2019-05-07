@@ -1,0 +1,11 @@
+.block-news {
+    padding-bottom: 3rem;
+    &__header {
+      justify-content: center;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      h2 {
+        font-size: 3rem;
+      }
+    }
+}

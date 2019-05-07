@@ -7,7 +7,7 @@
                 </div>
         </div>
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-4 block-solutions__card">
                 <div class="figure-box">
                     <figure>
                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg" />
@@ -16,8 +16,9 @@
                         </figcaption>
                     </figure>
                 </div>
+            <h4>Lorem ipsum</h4>    
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 block-solutions__card">
             <div class="figure-box">
                     <figure>
                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg" />
@@ -26,9 +27,10 @@
                         </figcaption>
                     </figure>
                 </div>
+            <h4>Lorem ipsum</h4>    
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-4 block-solutions__card">
             <div class="figure-box">
                     <figure>
                         <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg" />
@@ -37,17 +39,9 @@
                         </figcaption>
                     </figure>
                 </div>
+            <h4>Lorem ipsum</h4>    
             </div>
-            <div class="col-lg-3">
-            <div class="figure-box">
-                    <figure>
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg" />
-                        <figcaption>
-                            <p>lorem ipsum</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+
         </div>
  
     </div>

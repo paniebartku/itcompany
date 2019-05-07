@@ -14,7 +14,7 @@ import Glide from '@glidejs/glide'
 new Glide('.glide', {
   type: 'carousel',
   hoverpause: false,
-  autoplay: false, // set to true
+  autoplay: 2000,
   perView: 3,
   gap: 30,
   startAt: 0
