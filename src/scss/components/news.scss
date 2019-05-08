@@ -8,4 +8,18 @@
         font-size: 3rem;
       }
     }
+    figure {
+      &:hover {
+        img {transform: scale3d(1.2, 1.2, 1);}
+        
+      }
+      img {
+        transition: all 0.4s linear;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+    &__button {
+      text-align: center;
+      margin-top: 2rem;
+    }
 }

@@ -3,6 +3,9 @@
   justify-content: right;
   background: white;
   padding: 0.5rem 2.46rem 0 0;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.0325em;
   &.scrolled {
     //height: 0;
     transform: translateY(-100%);
@@ -15,6 +18,9 @@
       margin-right: 0.5rem;
     }
   }
+  @media(max-width:1090px){
+    padding-bottom: 0.5rem;
+  }
 }
 .navbar {
   background: white;
@@ -22,9 +28,26 @@
   &-brand {
     margin-top: -3rem;
   }
+  @media(max-width:1090px){
+    &-brand {
+      margin-top: -2rem;
+    }
+  }
   @media(max-width:991px){
     &-brand {
       margin-top: -2rem;
+    }
+  }
+}
+.navbar-brand {
+  @media(max-width:1260px){
+    img {
+      max-width:80%;
+    }
+  }
+  @media(max-width:1130px){
+    img {
+      max-width:70%;
     }
   }
 }
@@ -48,7 +71,9 @@
     @include transition;
   }
   @include transition;
-  padding: 0.5rem 1rem;
+  @media(min-width:1091px){
+    padding: 0.5rem 1rem;
+  }
 }
 @media(max-width:991px){
   .scrolledAgain {
@@ -58,19 +83,29 @@
 #navbarText {
   margin-left: 3rem;
   margin-top: -2rem;
-}
-@media(max-width:991px){
-  #navbarText {
-   
+  @media(max-width:1260px){
+    margin-left:-1rem;
+  }
+  @media(max-width:991px){
     margin-top: 0;
   }
 }
+
 .navbar-text {
   padding-bottom: 0.3125rem;
   padding-top: 0.3125rem;
   img {
     height: auto;
     max-width: 100%;
+  }
+  @media(max-width:1260px){
+    width:200px;
+  }
+  @media(max-width:1130px){
+    width:160px;
+  }
+  @media(max-width:1090px){
+    display: none;
   }
 }
 
@@ -82,4 +117,42 @@
 
 @mixin transition {
   transition: all 0.3s ease;
+}
+@media(min-width:992px){
+  .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity:0;
+    transform: translateY(20px);
+    transition:.5s ease all;
+    &.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.5s ease all;}
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    &:hover {
+      color: $itGreen!important;
+    }
+  }
+  .dropdown-item {
+    &:hover {
+      color: $itGreen;
+      background-color: white;
+    }
+  }
+  @media(max-width:991px){
+    align-items: center;
+  }
+  .dropdown.show{
+    @media(max-width:991px){
+      text-align: center;
+    }
+  }
+  .dropdown-menu.show{
+    @media(max-width:991px){
+      text-align: center;
+      border:none;
+    }
+  }
 }

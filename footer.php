@@ -1,12 +1,3 @@
-<div class="glide ">
-  <div data-glide-el="track" class="glide__track" >
-    <ul class="glide__slides">
-      <li class="glide__slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg"/></li>
-      <li class="glide__slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg"/></li>
-      <li class="glide__slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/src/erp2.jpg"/></li>
-    </ul>
-  </div>
-</div>
 <footer>
 
 <div class="footer-main">

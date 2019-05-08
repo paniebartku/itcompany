@@ -23,7 +23,8 @@ class Functions {
     public function add_actions() {
         add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts_and_styles' ) );
         add_action( 'init', array( $this, 'home_page_slider_post_type' ) );   
-        add_action( 'init', array( $this, 'case_studies_post_type' ) );   
+        add_action( 'init', array( $this, 'case_studies_post_type' ) ); 
+        add_action( 'init', array( $this, 'logos_post_type' ) );    
         add_action( 'admin_menu', array($this,'itcompany_add_admin_page') );  
         add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
         add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
@@ -86,6 +87,31 @@ class Functions {
             'has_archive' => true,
             'menu_icon'   => 'dashicons-image-filter',
             'supports' => array('title', 'editor')
+        ));
+    }
+
+    public function logos_post_type(){
+       
+        register_post_type( 'logos',
+            array(
+            'labels' => array(
+                'name' => __( 'Logos' ),
+                'singular_name' => __( 'Logo' ),
+                'add_new' => __( 'Add New' ),
+                'add_new_item' => __( 'Add New Logo' ),
+                'edit' => __( 'Edit' ),
+                'edit_item' => __( 'Edit Logo' ),
+                'new_item' => __( 'New Logo' ),
+                'view' => __( 'View Logo' ),
+                'view_item' => __( 'View Logo' ),
+                'search_items' => __( 'Search Logo' ),
+                'not_found' => __( 'No Logos found' ),
+                'not_found_in_trash' => __( 'No Logos found in Trash' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon'   => 'dashicons-image-filter',
+            'supports' => array('title', 'thumbnail')
         ));
     }
 

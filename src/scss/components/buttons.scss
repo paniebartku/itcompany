@@ -13,6 +13,17 @@
       background-color: $itDark;
     }
   }
+  &--standard {
+    background: $itGreen;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 25px;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: $itDark;
+    }
+  }
   &:hover {
     text-decoration: none;
   }
