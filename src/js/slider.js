@@ -1,4 +1,5 @@
 const slider = (() => {
+  
   const sliderViewSlides = [
     ...document.querySelectorAll(".slider--view__slides")
   ];
@@ -60,11 +61,12 @@ const slider = (() => {
     indexInterval = setInterval(goSlider, time);
   };
 
+  if(arrowRight)
   arrowRight.addEventListener("click", () => {
     clearInterval(indexInterval);
     changeActive();
   });
-
+  if(arrowLeft)
   arrowLeft.addEventListener("click", () => {
     clearInterval(indexInterval);
     changeActiveBack();
