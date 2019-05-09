@@ -11,14 +11,20 @@ import sameHeight from "./js/sameHeight.js";
 import addClasses from "./js/addClasses";
 import Glide from '@glidejs/glide'
 
-new Glide('.glide', {
-  type: 'carousel',
-  hoverpause: false,
-  autoplay: 2000,
-  perView: 3,
-  gap: 30,
-  startAt: 0
-}).mount();
+const logos = document.querySelectorAll('.glide');
+
+for (let i = 0; i < logos.length; i++) {
+  let glide = new Glide(logos[i], {
+    type: 'carousel',
+    hoverpause: false,
+    autoplay: 2000,
+    perView: 3,
+    gap: 30,
+    startAt: 0
+  });
+
+  glide.mount()
+}
 
 
 
@@ -34,3 +40,4 @@ import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
     console.log("So it begins");
   });
 })(jQuery);
+
