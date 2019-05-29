@@ -21,4 +21,45 @@
 .block-search {
   padding-bottom: 3rem;
   margin-top: 10rem;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Montserrat", sans-serif;
+  }
+  .search__header {
+    &--ask {
+      font-style: italic;
+    }
+    &--news,
+    &--pages {
+      display: flex;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+  }
+  .search__item {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    .item {
+      &--content {
+        a {
+          color: $itGreen;
+          @include transition;
+          &:hover {
+            text-decoration: none;
+            color: $itDark;
+          }
+          @media (max-width: 767px) {
+            margin-top: 1rem;
+            display: block;
+          }
+        }
+        p {
+          margin-top: 1rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
 }
