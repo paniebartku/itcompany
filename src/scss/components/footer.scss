@@ -1,9 +1,39 @@
 footer {
+  color: $itCreme;
   .footer-main {
     padding: 2rem 0;
     background-color: #4c4c4c;
     h3 {
       color: white;
+    }
+    ul {
+      padding-left: 0.5rem;
+      list-style: none;
+      line-height: 1.75;
+      a {
+        color: #cccaca;
+        position: relative;
+        line-height: 1.6;
+        &:hover {
+          text-decoration: none;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: -2px;
+          left: 0;
+          background-color: #fff;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover::before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
     }
   }
   .footer-additional {
@@ -16,6 +46,8 @@ footer {
       a {
         color: $itCreme;
         transition: 0.3s;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
         &:hover {
           text-decoration: none;
           color: white;
@@ -35,6 +67,10 @@ footer {
           border-color: white;
         }
       }
+    }
+    &__enova,
+    &__iso {
+      text-align: center;
     }
     p {
       margin: 0.5rem 0 0 0;

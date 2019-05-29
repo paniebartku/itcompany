@@ -122,12 +122,14 @@ class Functions {
     	
 function itcompany_custom_settings() {
     register_setting( 'itcompany-settings-group', 'facebook' );
+    register_setting( 'itcompany-settings-group', 'linkedin' );
     register_setting( 'itcompany-settings-group', 'phone' );
     register_setting( 'itcompany-settings-group', 'email' );
 	add_settings_section( 'itcompany-socials-options', 'Your important information', 'itcompany_socials_options', 'itcompany_options');
     add_settings_field( 'sidebar-name1', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name2', 'Phone', 'itcompany_socials_phone', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name3', 'Email', 'itcompany_socials_email', 'itcompany_options', 'itcompany-socials-options');
+    add_settings_field( 'sidebar-name4', 'Linkedin', 'itcompany_socials_linkedin', 'itcompany_options', 'itcompany-socials-options');
 
 }
 
@@ -185,6 +187,10 @@ require get_template_directory() . '/inc/class.ACFfunctions.php';
 function itcompany_socials_name() {
 	$facebookLink = esc_attr( get_option( 'facebook' ) );
 	echo '<input type="text" name="facebook" value="'.$facebookLink.'" placeholder="Facebook" />';
+}
+function itcompany_socials_linkedin() {
+	$linkedinLink = esc_attr( get_option( 'linkedin' ) );
+	echo '<input type="text" name="linkedin" value="'.$linkedinLink.'" placeholder="Linkedin" />';
 }
 function itcompany_socials_phone() {
 	$phone = esc_attr( get_option( 'phone' ) );
