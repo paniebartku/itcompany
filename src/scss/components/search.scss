@@ -1,0 +1,24 @@
+.search__form {
+  display: flex;
+  min-height: 20vh;
+  justify-content: space-around;
+  .searchinput {
+    width: 50%;
+    height: 2.6rem;
+    text-indent: 10px;
+  }
+  .form-control {
+    &:focus {
+      border-color: $itGreen;
+      box-shadow: 0 0 0 0.2rem rgba(173, 189, 35, 0.3);
+    }
+  }
+  ::placeholder {
+    color: $itGreen;
+  }
+}
+
+.block-search {
+  padding-bottom: 3rem;
+  margin-top: 10rem;
+}
