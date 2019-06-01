@@ -16,6 +16,7 @@ class Functions {
     public function theme_setup_core() {
         add_theme_support( 'menus' );
         register_nav_menu( 'primary', 'Primary menu' );
+        register_nav_menu( 'secondary', 'Secondary menu' );
         add_theme_support( 'custom-logo');
         add_theme_support( 'post-thumbnails' );
     }
@@ -28,6 +29,7 @@ class Functions {
         add_action( 'admin_menu', array($this,'itcompany_add_admin_page') );  
         add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
         add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
+        add_action( 'widgets_init', array( $this, 'about_sidebars' ) );
         
     }
 
@@ -172,6 +174,17 @@ public function footer_sidebars() {
         'after_title'   => '</h3>',
         ) );    
 }
+public function about_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'About menu sidebar'),
+        'id' => 'about-sidebar-1',
+        'description' => __( 'about sidebar'),
+        'before_widget' => '<div id="%1$s" class="about-menu__wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="about-menu__title">',
+        'after_title'   => '</h3>',
+        ) );
+}
 
 
     
@@ -179,7 +192,7 @@ public function footer_sidebars() {
 
 $functions = new Functions;
 require get_template_directory() . '/inc/class.Walker.php';
-require get_template_directory() . '/inc/class.PrimaryMenu.php';
+require get_template_directory() . '/inc/class.NavbarMenus.php';
 require get_template_directory() . '/inc/class.ACFfunctions.php';
 
 

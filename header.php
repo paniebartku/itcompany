@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php bloginfo();?></title>
-    <!-- Required Core stylesheet -->
-<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
-<!-- Optional Theme stylesheet -->
-<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <?php wp_head(); ?>
 </head>
 <body>
 <header class="fixed-top ">
     <div class="upperinfo">
+      <div class="upperinfo__left">
+      <a href="#" data-toggle="modal" data-target="#searchModal"><span class="searchGLass"><?php  include("src/img/searchGlass.svg"); ?></span></a>
+    </div>
+    <div class="upperinfo__right">
       <?php 
     $phoneNumber= esc_attr( get_option( 'phone' ) ); 
     $email= esc_attr( get_option( 'email' ) ); 
@@ -26,6 +26,7 @@
     <?php if(!empty($phoneNumber)){?>
     <span class="upperinfo__phone"><i class="fa fa-phone" aria-hidden="true"></i>tel. <?php echo $phoneNumber;?></span>
     <?php } ?>
+    </div>
     </div>
   
        
@@ -43,11 +44,16 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <?php do_action('primary_nav'); ?>
+      <div class="collapse navbar-collapse " id="navbarText">
+        <div class="flexbox__navbar">
+          <?php do_action('primary_nav'); ?>
+          <?php do_action('secondary_nav'); ?>
+        </div>
       </div>
       <span class="navbar-text">
-          <img src="<?php echo get_template_directory_uri();?>/src/partner.jpg"/>
+
+          <img src="<?php echo get_template_directory_uri();?>/src/img/partner.jpg"/>
+          
     </span>
     </nav>
 </header> 
