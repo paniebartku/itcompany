@@ -1,0 +1,42 @@
+.block-heroimage {
+  display: none;
+  @media (max-width: 575px) {
+    display: block;
+  }
+  background-position: top;
+  padding-top: 75%;
+  @media (max-width: 420px) {
+    padding-top: 100%;
+  }
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  &::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+      url("../img/szkolenia.jpg");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 80px;
+    left: 0;
+  }
+  &__content {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: block;
+    letter-spacing: 1.2px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    h1 {
+      @media (max-width: 350px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
