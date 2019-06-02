@@ -35,8 +35,14 @@ get_header(); ?>
                     </div>
                     <div class="wrapper__list">
                     
-                    <div class="row block-cs__loop">
-                    <?php $loop = new WP_Query( array( 'post_type' => 'case-studies'));
+                    <div class="row block-cs__loop"><?php
+                   $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+$args = array(
+  'posts_per_page' => 2,
+  'paged' => $paged,
+  'post_type' => 'case-studies'
+);?>
+                    <?php $loop = new WP_Query($args );
                         if ( $loop->have_posts() ) :
                             while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         
@@ -58,12 +64,40 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                                            
+                            
+                             <?php
+                     endwhile; 
+
+                     $total_pages = $loop->max_num_pages;
+
+                     if ($total_pages > 1){
+                 
+                         $current_page = max(1, get_query_var('paged'));
+                 ?>
+                 <div class="block-cs__pagination"> 
+                     <?php
+                         echo paginate_links(array(
+                             'base' => get_pagenum_link(1) . '%_%',
+                             'format' => '/page/%#%',
+                             'current' => $current_page,
+                             'total' => $total_pages,
+                             'prev_text'    => __('« poprzednie'),
+                             'next_text'    => __('następne »'),
+                         ));
+                     }    ?>
+                     </div>
+                     <?php
+                 
                         
-                            <?php endwhile; 
-                        endif;
+                        endif; 
+                   
                     wp_reset_postdata();
                     ?>
+                    <?php
+     ?>
+                 
+
+
     </div>
                             
                     </div>
