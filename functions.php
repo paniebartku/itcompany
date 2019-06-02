@@ -127,12 +127,13 @@ function itcompany_custom_settings() {
     register_setting( 'itcompany-settings-group', 'linkedin' );
     register_setting( 'itcompany-settings-group', 'phone' );
     register_setting( 'itcompany-settings-group', 'email' );
+    register_setting( 'itcompany-settings-group', 'demo' );
 	add_settings_section( 'itcompany-socials-options', 'Your important information', 'itcompany_socials_options', 'itcompany_options');
     add_settings_field( 'sidebar-name1', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name2', 'Phone', 'itcompany_socials_phone', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name3', 'Email', 'itcompany_socials_email', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name4', 'Linkedin', 'itcompany_socials_linkedin', 'itcompany_options', 'itcompany-socials-options');
-
+    add_settings_field( 'sidebar-name5', 'Demo', 'itcompany_socials_demo', 'itcompany_options', 'itcompany-socials-options');
 }
 
 
@@ -212,6 +213,10 @@ function itcompany_socials_phone() {
 function itcompany_socials_email() {
 	$email = esc_attr( get_option( 'email' ) );
 	echo '<input type="text" name="email" value="'.$email.'" placeholder="main email" />';
+}
+function itcompany_socials_demo() {
+	$demo = esc_attr( get_option( 'demo' ) );
+	echo '<input type="text" name="demo" value="'.$demo.'" placeholder="demo link" />';
 }
 function itcompany_theme_create_page() {
 	require_once( get_template_directory() . '/inc/itcompany-admin.php' );
