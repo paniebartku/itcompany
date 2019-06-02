@@ -30,11 +30,12 @@ class Functions {
         add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
         add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
         add_action( 'widgets_init', array( $this, 'about_sidebars' ) );
+        add_action( 'pre_get_posts', array($this, 'parse_request') );
         
     }
 
     public function add_filters(){
-       
+        add_filter( 'post_type_link', array($this, 'remove_slug' ),10, 3 );
     }
 
     public function load_scripts_and_styles() {
@@ -144,8 +145,8 @@ public function footer_sidebars() {
         'description' => __( 'First footer sidebar'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="footer-main__sidebar-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h5 class="footer-main__sidebar-title">',
+        'after_title'   => '</h5>',
         ) );
     register_sidebar( array(
         'name' => __( 'Footer sidebar 2'),
@@ -153,8 +154,8 @@ public function footer_sidebars() {
         'description' => __( 'Second footer sidebar'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="footer-main__sidebar-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h5 class="footer-main__sidebar-title">',
+        'after_title'   => '</h5>',
         ) );
     register_sidebar( array(
         'name' => __( 'Footer sidebar 3'),
@@ -162,8 +163,8 @@ public function footer_sidebars() {
         'description' => __( 'Third footer sidebar'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="footer-main__sidebar-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h5 class="footer-main__sidebar-title">',
+        'after_title'   => '</h5>',
         ) );
     register_sidebar( array(
         'name' => __( 'Footer sidebar 4'),
@@ -171,8 +172,8 @@ public function footer_sidebars() {
         'description' => __( 'Fourth footer sidebar'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="footer-main__sidebar-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h5 class="footer-main__sidebar-title">',
+        'after_title'   => '</h5>',
         ) );    
 }
 public function about_sidebars() {
@@ -187,7 +188,25 @@ public function about_sidebars() {
         ) );
 }
 
+public function remove_slug( $post_link, $post ) {
+        
+    if ( 'case-studies' != $post->post_type || 'publish' != $post->post_status ) {
+    return $post_link;
+    }
+     
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    return $post_link;
+}
+public function parse_request( $query ) {
+        
+    if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+        return;
+    }
 
+    if ( ! empty( $query->query['name'] ) ) {
+        $query->set( 'post_type', array( 'case-studies' ) );
+    }
+}      
     
 }
 
