@@ -1,0 +1,43 @@
+.block-archive {
+  padding-bottom: 3rem;
+  margin-top: 12rem;
+  &__content {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 1.5rem;
+      a {
+        color: $itGreen;
+        @include transition;
+        &:hover {
+          text-decoration: none;
+          color: $itDark;
+        }
+      }
+    }
+    p {
+      margin-top: 1rem;
+    }
+    small {
+      text-align: right;
+      margin-right: 1rem;
+      a {
+        color: $itGreen;
+        @include transition;
+        &:hover {
+          color: $itDark;
+        }
+      }
+    }
+    .content__readmore {
+      align-self: flex-start;
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
