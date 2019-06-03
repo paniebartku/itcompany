@@ -219,7 +219,7 @@ $functions = new Functions;
 require get_template_directory() . '/inc/class.Walker.php';
 require get_template_directory() . '/inc/class.NavbarMenus.php';
 require get_template_directory() . '/inc/class.ACFfunctions.php';
-
+require get_template_directory() . '/inc/class.RemoveComments.php';
 
 
 function itcompany_socials_name() {
@@ -248,3 +248,4 @@ function itcompany_theme_create_page() {
 function itcompany_socials_options() {
 	echo 'Just paste and save :)';
 }
+
