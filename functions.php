@@ -31,6 +31,7 @@ class Functions {
         add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
         add_action( 'widgets_init', array( $this, 'about_sidebars' ) );
         add_action( 'pre_get_posts', array($this, 'parse_request') );
+        add_action( 'init', array($this, 'it_company_remove_tags' ) );
         
     }
 
@@ -207,6 +208,10 @@ public function parse_request( $query ) {
         $query->set( 'post_type', array( 'case-studies' ) );
     }
 }      
+
+function it_company_remove_tags() {
+    unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+}
     
 }
 
