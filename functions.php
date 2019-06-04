@@ -130,12 +130,16 @@ function itcompany_custom_settings() {
     register_setting( 'itcompany-settings-group', 'phone' );
     register_setting( 'itcompany-settings-group', 'email' );
     register_setting( 'itcompany-settings-group', 'demo' );
+    register_setting( 'itcompany-settings-group', 'team_viewer' );
+    register_setting( 'itcompany-settings-group', 'any_desk' );
 	add_settings_section( 'itcompany-socials-options', 'Your important information', 'itcompany_socials_options', 'itcompany_options');
     add_settings_field( 'sidebar-name1', 'Facebook', 'itcompany_socials_name', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name2', 'Phone', 'itcompany_socials_phone', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name3', 'Email', 'itcompany_socials_email', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name4', 'Linkedin', 'itcompany_socials_linkedin', 'itcompany_options', 'itcompany-socials-options');
     add_settings_field( 'sidebar-name5', 'Demo', 'itcompany_socials_demo', 'itcompany_options', 'itcompany-socials-options');
+    add_settings_field( 'sidebar-name6', 'Team Viewer', 'itcompany_socials_team_viewer', 'itcompany_options', 'itcompany-socials-options');
+    add_settings_field( 'sidebar-name7', 'Any Desk', 'itcompany_socials_any_desk', 'itcompany_options', 'itcompany-socials-options');
 }
 
 
@@ -205,7 +209,7 @@ public function parse_request( $query ) {
     }
 
     if ( ! empty( $query->query['name'] ) ) {
-        $query->set( 'post_type', array( 'case-studies' ) );
+        $query->set( 'post_type', array( 'post', 'case-studies' ) );
     }
 }      
 
@@ -241,6 +245,14 @@ function itcompany_socials_email() {
 function itcompany_socials_demo() {
 	$demo = esc_attr( get_option( 'demo' ) );
 	echo '<input type="text" name="demo" value="'.$demo.'" placeholder="demo link" />';
+}
+function itcompany_socials_team_viewer() {
+	$teamViewer = esc_attr( get_option( 'team_viewer' ) );
+	echo '<input type="text" name="team_viewer" value="'.$teamViewer.'" placeholder="team_viewer link" />';
+}
+function itcompany_socials_any_desk() {
+	$anyDesk = esc_attr( get_option( 'any_desk' ) );
+	echo '<input type="text" name="any_desk" value="'.$anyDesk.'" placeholder="any_desk link" />';
 }
 function itcompany_theme_create_page() {
 	require_once( get_template_directory() . '/inc/itcompany-admin.php' );

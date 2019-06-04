@@ -10,6 +10,11 @@ class ACFfunctions extends Functions {
                 echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'"/>';
             }
         }
+        function image_acff($image){
+            if( !empty($image) ){ 
+                   echo '<img class="img-fluid" src="'.$image['url'].'" alt="'.$image['alt'].'"/>';
+             }
+        }
     }   
  
 }
