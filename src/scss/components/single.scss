@@ -1,0 +1,11 @@
+.block-single {
+  padding-bottom: 3rem;
+  margin-top: 10rem;
+  &__title {
+    color: $itGreen;
+    margin-bottom: 2rem;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}

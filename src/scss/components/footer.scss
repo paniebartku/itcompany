@@ -1,10 +1,15 @@
 footer {
   color: $itCreme;
   .footer-main {
-    padding: 2rem 0;
+    padding: 1rem 0;
+    padding-top: 2rem;
     background-color: #4c4c4c;
-    h3 {
+    h5 {
       color: white;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
     }
     ul {
       padding-left: 0.5rem;
@@ -14,6 +19,7 @@ footer {
         color: #cccaca;
         position: relative;
         line-height: 1.6;
+        font-size: 0.9rem;
         &:hover {
           text-decoration: none;
         }
@@ -35,14 +41,28 @@ footer {
         }
       }
     }
+    &__item {
+      @media (max-width: 991px) {
+        margin-bottom: 1rem;
+      }
+    }
   }
   .footer-additional {
     color: $itCreme;
     background-color: #424242;
     padding: 1rem 0;
+    &__item {
+      @media (max-width: 991px) {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
     &__socials {
       display: flex;
       justify-content: right;
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
       a {
         color: $itCreme;
         transition: 0.3s;

@@ -3,8 +3,21 @@
   &__header {
     text-align: center;
     flex-direction: column;
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
   }
   &__card {
+    margin-bottom: 2rem;
+    a {
+      color: white;
+      @include transition;
+      &:hover {
+        text-decoration: none;
+        color: $itDark;
+      }
+    }
     h4 {
       font-size: 1.2rem;
       font-weight: 500;

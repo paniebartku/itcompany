@@ -1,5 +1,15 @@
+body {
+  overflow-x: hidden;
+}
 .customize-support {
   .fixed-top {
     top: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .customize-support {
+    .fixed-top {
+      top: 0;
+    }
   }
 }

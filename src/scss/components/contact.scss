@@ -1,0 +1,50 @@
+.block-page-contact {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+.header__parallax {
+  height: 0;
+  padding-top: 30%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  position: relative;
+  .header__into-parallax {
+    display: flex;
+    align-items: center;
+    margin-top: -15%;
+    height: 100%;
+  }
+}
+.header__into-parallax--white {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem 1rem;
+  color: white;
+  text-align: center;
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+.contact__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contact__map {
+  margin-top: 2rem;
+  position: relative;
+  padding-bottom: 45%;
+  height: 450px;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

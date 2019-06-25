@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+  .fadeLoad:nth-child(3) {
+    animation-delay: 0.25s;
+  }
+  .fadeLoad:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  @for $i from 1 to 40 {
+    .fadeStart:nth-child(#{$i}) {
+      animation-delay: $i * 0.25s;
+    }
+  }
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  @keyframes slideInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .slideInLeft {
+    animation-name: slideInLeft;
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .slideInRight {
+    animation-name: slideInRight;
+  }
+}

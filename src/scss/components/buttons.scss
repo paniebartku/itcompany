@@ -24,6 +24,29 @@
       background-color: $itDark;
     }
   }
+  &--small {
+    background: $itGreen;
+    padding: 0.4rem 1rem;
+    color: white;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: $itDark;
+    }
+  }
+  &--negative {
+    background: $itDark;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 25px;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: $itGreen;
+    }
+  }
   &:hover {
     text-decoration: none;
   }

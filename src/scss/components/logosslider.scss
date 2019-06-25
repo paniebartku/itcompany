@@ -1,17 +1,17 @@
 .block-logos-slider {
-    padding-bottom: 3rem;
-    &__header {
-      justify-content: center;
-      margin-top: 3.5rem;
-      margin-bottom: 3.5rem;
-      h2 {
-        font-size: 3rem;
-      }
+  padding-bottom: 3rem;
+  &__header {
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    h2 {
+      font-size: 3rem;
     }
-    &__list {
-        align-items: baseline; 
-    }
-    &__slide {
-        text-align: center;
-    }
+  }
+  &__list {
+    align-items: baseline;
+  }
+  &__slide {
+    text-align: center;
+  }
 }

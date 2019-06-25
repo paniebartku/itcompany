@@ -1,25 +1,77 @@
 .block-news {
-    padding-bottom: 3rem;
-    &__header {
-      justify-content: center;
-      margin-top: 3.5rem;
-      margin-bottom: 3.5rem;
-      h2 {
-        font-size: 3rem;
-      }
+  &__header {
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+  &__button {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .news__header {
+    margin-bottom: 2rem;
+  }
+  .news__read-more {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .news__tags {
+    a {
+      color: $itGreen;
     }
-    figure {
-      &:hover {
-        img {transform: scale3d(1.2, 1.2, 1);}
-        
-      }
+  }
+  figure {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    &:hover {
       img {
-        transition: all 0.4s linear;
-        transform: scale3d(1, 1, 1);
+        opacity: 1;
+        transform: scale3d(1.2, 1.2, 1);
       }
     }
-    &__button {
-      text-align: center;
-      margin-top: 2rem;
+    img {
+      opacity: 0.9;
+      transition: all 0.4s linear;
+      transform: scale3d(1, 1, 1);
+      &:hover {
+        .figcaption {
+          background-size: 100%;
+          opacity: 1;
+        }
+      }
     }
+  }
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    height: 100%;
+    display: inline-block;
+    &:hover {
+      div {
+        opacity: 1;
+      }
+    }
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      color: #fff;
+      transition: 0.3s;
+      h5 {
+        margin-bottom: 2rem;
+        background: $itGreen;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
 }

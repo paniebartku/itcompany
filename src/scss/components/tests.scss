@@ -1,0 +1,28 @@
+.block-tests {
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  &__content {
+    margin-bottom: 2rem;
+  }
+  .bg-grey {
+    background: $itGrey;
+  }
+  .content__icon {
+    i {
+      font-size: 9.4rem;
+      color: $itDark;
+      //   &:hover {
+      //     color: $itGreen;
+      //   }
+    }
+  }
+  .content__image {
+    img {
+      height: 9.4rem;
+    }
+  }
+  .content__button {
+    margin-top: 2rem;
+  }
+}

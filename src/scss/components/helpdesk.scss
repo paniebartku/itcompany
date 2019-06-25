@@ -1,22 +1,19 @@
 .block-page-helpdesk {
   padding-bottom: 1.5rem;
   margin-top: 11rem;
-
   .helpdesk {
     &__items-wrapper {
       margin-top: 1rem;
-      &__item {
-      }
       .helpdesk__image {
         margin-top: 1rem;
         text-align: center;
         img {
-          max-height: 280px;
+          max-height: 200px;
         }
       }
       .helpdesk__button {
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
       }
     }
