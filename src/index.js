@@ -4,34 +4,40 @@ import "popper.js";
 import "bootstrap/js/dist/util";
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
-
+import "bootstrap/js/dist/modal";
 import slider from "./js/slider.js";
 import scrollToTop from "./js/scrollToTop.js";
 import sameHeight from "./js/sameHeight.js";
 import addClasses from "./js/addClasses";
-import Glide from '@glidejs/glide'
+import viewportAction from "./js/viewportAction";
+import Glide from "@glidejs/glide";
 
-const logos = document.querySelectorAll('.glide');
+const logos = document.querySelectorAll(".glide");
 
 for (let i = 0; i < logos.length; i++) {
   let glide = new Glide(logos[i], {
-    type: 'carousel',
+    type: "carousel",
     hoverpause: false,
     autoplay: 2000,
-    perView: 3,
+    perView: 4,
     gap: 30,
-    startAt: 0
+    startAt: 0,
+    breakpoints: {
+      767: {
+        perView: 3
+      },
+      420: {
+        perView: 1
+      }
+    }
   });
 
-  glide.mount()
+  glide.mount();
 }
 
-
-
 import "./scss/style.scss";
-import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
-import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-
+import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
 
 ("use strict");
 
@@ -41,3 +47,8 @@ import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
   });
 })(jQuery);
 
+$(document).on("shown.bs.modal", ".modal", function() {
+  $(this)
+    .find("[autofocus]")
+    .focus();
+});

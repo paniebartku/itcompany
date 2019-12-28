@@ -1,5 +1,4 @@
 const slider = (() => {
-  
   const sliderViewSlides = [
     ...document.querySelectorAll(".slider--view__slides")
   ];
@@ -8,7 +7,7 @@ const slider = (() => {
   const arrowLeft = document.querySelector(".slider--arrows__left");
   const arrowRight = document.querySelector(".slider--arrows__right");
 
-  const time = 800000;
+  const time = 700000;
   let active = 0;
 
   const changeSlide = () => {
@@ -17,6 +16,12 @@ const slider = (() => {
     );
     sliderViewSlides[activeSlide].classList.remove("is-active");
     sliderViewSlides[active].classList.add("is-active");
+    // if (window.innerWidth <= 767) {
+    //   sliderViewSlides[active].setAttribute(
+    //     "style",
+    //     "transform:translateX(-" + sliderViewSlides[active].offsetLeft + "px)"
+    //   );
+    // }
   };
 
   const changeDot = () => {
@@ -61,16 +66,16 @@ const slider = (() => {
     indexInterval = setInterval(goSlider, time);
   };
 
-  if(arrowRight)
-  arrowRight.addEventListener("click", () => {
-    clearInterval(indexInterval);
-    changeActive();
-  });
-  if(arrowLeft)
-  arrowLeft.addEventListener("click", () => {
-    clearInterval(indexInterval);
-    changeActiveBack();
-  });
+  if (arrowRight)
+    arrowRight.addEventListener("click", () => {
+      clearInterval(indexInterval);
+      changeActive();
+    });
+  if (arrowLeft)
+    arrowLeft.addEventListener("click", () => {
+      clearInterval(indexInterval);
+      changeActiveBack();
+    });
 })();
 
 export default slider;

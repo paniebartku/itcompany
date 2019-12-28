@@ -1,7 +1,7 @@
 <section class="block-logos-slider">
 <div class="container">
         <div class="row block-logos-slider__header">
-            <h2>Wspieramy</h2>
+            <h2>Nasi klienci</h2>
         </div>
         <div class="row block-logos-slider__content glide">
         <div data-glide-el="track" class="glide__track" >

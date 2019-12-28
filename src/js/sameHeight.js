@@ -1,5 +1,7 @@
 const sameHeight = (() => {
-  const blockquotes = [...document.querySelectorAll("blockquote")];
+  const blockquotes = [
+    ...document.querySelectorAll(".block-cs__loop--blockquote")
+  ];
   let tallest = 0;
 
   for (let i = 0; i < blockquotes.length; i++) {
@@ -12,19 +14,15 @@ const sameHeight = (() => {
   }
 
   window.addEventListener("resize", () => {
-    
-
     if (window.innerWidth >= 991) {
       for (let i = 0; i < blockquotes.length; i++) {
         let element = blockquotes[i];
         element.style.height = "";
         let elementHeight = element.offsetHeight;
 
-        
         tallest = elementHeight > tallest ? elementHeight : tallest;
 
         blockquotes[i].style.height = tallest + "px";
-        
       }
     } else {
       for (let i = 0; i < blockquotes.length; i++) {

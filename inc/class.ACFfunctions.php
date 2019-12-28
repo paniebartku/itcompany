@@ -15,6 +15,17 @@ class ACFfunctions extends Functions {
                    echo '<img class="img-fluid" src="'.$image['url'].'" alt="'.$image['alt'].'"/>';
              }
         }
+        function image_acf_background_css($image){
+            if( !empty($image) ){ 
+               echo $image['url'];
+           }
+        }
+        
+        function textarea_acf($text){
+            if( !empty($text) ){ 
+               echo '<p>'.$text.'</p>';
+           }
+        }
     }   
  
 }

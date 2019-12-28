@@ -30,6 +30,9 @@ class Functions {
         add_action( 'admin_init', array($this, 'itcompany_custom_settings' ));
         add_action( 'widgets_init', array( $this, 'footer_sidebars' ) );
         add_action( 'widgets_init', array( $this, 'about_sidebars' ) );
+        add_action( 'widgets_init', array( $this, 'enova365_sidebars' ) );
+        add_action( 'widgets_init', array( $this, 'training_sidebars' ) );
+        add_action( 'widgets_init', array( $this, 'vps_sidebars' ) );
         add_action( 'pre_get_posts', array($this, 'parse_request') );
         add_action( 'init', array($this, 'it_company_remove_tags' ) );
         
@@ -186,12 +189,49 @@ public function about_sidebars() {
         'name' => __( 'About menu sidebar'),
         'id' => 'about-sidebar-1',
         'description' => __( 'about sidebar'),
-        'before_widget' => '<div id="%1$s" class="about-menu__wrapper">',
+        'before_widget' => '<div id="%1$s" class="sidebar-menu__wrapper">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="about-menu__title">',
+        'before_title'  => '<h3 class="sidebar-menu__title">',
         'after_title'   => '</h3>',
         ) );
 }
+
+public function enova365_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'enova365 menu sidebar'),
+        'id' => 'enova365-sidebar-1',
+        'description' => __( 'enova365 sidebar'),
+        'before_widget' => '<div id="%1$s" class="sidebar-menu__wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar-menu__title">',
+        'after_title'   => '</h3>',
+        ) );
+}
+
+public function training_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'training menu sidebar'),
+        'id' => 'training-sidebar-1',
+        'description' => __( 'training sidebar'),
+        'before_widget' => '<div id="%1$s" class="sidebar-menu__wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar-menu__title">',
+        'after_title'   => '</h3>',
+        ) );
+}
+
+public function vps_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'vps menu sidebar'),
+        'id' => 'vps-sidebar-1',
+        'description' => __( 'vps sidebar'),
+        'before_widget' => '<div id="%1$s" class="sidebar-menu__wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar-menu__title">',
+        'after_title'   => '</h3>',
+        ) );
+}
+
 
 public function remove_slug( $post_link, $post ) {
         

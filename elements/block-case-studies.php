@@ -22,10 +22,13 @@
                     do_action('unique_action_tag', $image );
                     ?>
                     </div>
-                    <blockquote><?php echo get_field('cs-excerpt') ?></blockquote>
+                    <blockquote class="block-cs__loop--blockquote"><?php echo get_field('cs-excerpt') ?></blockquote>
                     <div class="block-cs__loop--author">
                         <span><?php echo get_field('cs-person') ?></span>
                         <span><?php echo get_field('cs-job') ?></span>
+                    </div>
+                    <div class="block-cs__loop--readmore">
+                        <a class="button button--small" href="<?php echo the_permalink(); ?>">Więcej</a>
                     </div>
                 </div>
             </div>

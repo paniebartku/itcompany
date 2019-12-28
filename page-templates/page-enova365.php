@@ -1,24 +1,24 @@
 <?php 
 
 /*
-*Template name: About
+*Template name: enova365
 */
 get_header(); ?>
 <section class="block-page-sidebar">
     <div class="container">
     <div class="row">
-    <?php if( is_active_sidebar( 'about-sidebar-1' ) ){ ?>
+    <?php if( is_active_sidebar( 'enova365-sidebar-1' ) ){ ?>
             <div class="col-lg-4">
-                <div class="block-page-sidebar__sidebar">
-                    <?php if( is_active_sidebar( 'about-sidebar-1' ) ){ 
-                    dynamic_sidebar( 'about-sidebar-1' );
+                <div class="block-page-sidebar_sidebar">
+                    <?php if( is_active_sidebar( 'enova365-sidebar-1' ) ){ 
+                    dynamic_sidebar( 'enova365-sidebar-1' );
                     }else {echo '';}?>
                 </div>
             </div>
             <?php } ?>
 
 
-          <?php  if( is_active_sidebar( 'about-sidebar-1' ) ){ ?>
+          <?php  if( is_active_sidebar( 'enova365-sidebar-1' ) ){ ?>
             <div class="offset-lg-1 col-lg-7">
           <?php } else { ?>   
             <div class="col-sm-12">

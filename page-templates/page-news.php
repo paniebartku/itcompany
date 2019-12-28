@@ -4,18 +4,10 @@
 *Template name: News
 */
 get_header(); ?>
-<style>
-
-</style>
-
 <section class="block-page">
 <div class="container">
 <div class="row">
 	
-	
-		
-		
-
 		<?php 
         $args = array('posts_per_page' => -1, 'post_type' => 'post');
 		query_posts($args);
@@ -30,24 +22,30 @@ get_header(); ?>
 					endif;
 				?>
 				
-					<div class="col-sm-<?php echo $column; echo $class; ?> blog-item">
+					<div class="col-sm-<?php echo $column; echo $class; ?> blog__item">
 						<?php if( has_post_thumbnail() ):
 							$image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
 						endif; ?>
                         <?php if($i === 0){?>
-						<div class="" style="background-image: url(<?php echo $image; ?>);">
-							
+						<div class="blog__item--first" style="background-image: url(<?php echo $image; ?>);">
+							<div class="first__title">
 							<?php the_title( sprintf('<h1 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
-							<p><?php the_excerpt(); ?></p>
-							<small><?php the_category(' '); ?></small>
+							</div>
+							<div class="first__excerpt"><?php the_excerpt(); ?>	<small><?php the_category(' '); ?></small></div>
+						<style>
+						
+						</style>
 						</div>
                         <?php }else { ?>
-                        	<div class="" >
+                        	<div class="blog__item--older" >
 							
 							<?php the_title( sprintf('<h1 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
 							<img class="img-fluid" src="<?php echo $image ?>"/>
-							<p><?php the_excerpt(); ?></p>
-							<small><?php the_category(' '); ?></small>
+							<?php the_excerpt(); ?>
+							<div class="older__readmore">
+								<a class="button--slider" href="<?php echo the_permalink(); ?>">Więcej</a>
+							</div>
+							<small><?php the_category(', '); ?></small>
 						</div>
                         <?php } ?>
 					</div>
