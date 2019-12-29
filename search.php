@@ -24,7 +24,7 @@ if ( $the_query->have_posts() ):
     $countNews = 0; 
 while ( have_posts() ) : the_post();   
 
-   if (  get_post_type() === 'post' ){
+   if (  get_post_type() === 'post' &&  get_post_type() !== 'page' ){
      
        ?>
    <div class="row search__item">
@@ -96,13 +96,15 @@ while ( have_posts() ) : the_post();
 
                 </div>
               
-                <?php  $countPages++; }
+                <?php   $countPages++; }
                 
                 
                
             endwhile;
+            
+
              wp_reset_postdata(); 
-            //echo $countPages; 
+           // echo $countPages; 
             
             else : ?>
             <h2 style='font-weight:bold;color:#000'>Nic nie znaleziono</h2>
@@ -122,7 +124,7 @@ while ( have_posts() ) : the_post();
 </div>
 
 </section>
-<?php if($countPages <= 0){?>
+<?php if($countPages == 0){?>
   <style>
       .search__header--pages {display:none!important;}
   </style>

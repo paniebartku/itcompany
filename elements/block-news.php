@@ -1,10 +1,15 @@
 <section class="block-news">
     <div class="container">
         <div class="row block-news__header">
-            <h2>Aktualności</h2>
+         <?php $newsHeader = get_field('news_header');
+         if(!empty($newsHeader)){
+            echo "<h2>".$newsHeader."</h2>" ;
+         }?>
         </div>
         <div class="row block-news__content">
-        <?php $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 1));
+        <?php 
+        $postPerPage = get_field('news_per_page');
+        $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => $postPerPage));
         if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
            
@@ -34,7 +39,7 @@
                 <img class="img-fluid" src="<?php echo $image[0];?>" />
                 <figcaption>
                                 <div>
-                                    <h5><?php echo 'lorem ipsum'; ?></h5>
+                                    <h5><?php echo 'zobacz'; ?></h5>
                                 </div>
                 </figcaption>
             </figure>
@@ -49,7 +54,8 @@
         </div>
         <div class="row block-news__button">
             <div class="col-lg-12">
-                <a href="#" class="button button--standard">Zobacz wszystkie</a>
+                <?php $newsLink = get_field('news_link'); ?>
+                <a href="<?php echo $newsLink; ?>" class="button button--standard">Zobacz wszystkie</a>
             </div>
         </div>
     </div>    

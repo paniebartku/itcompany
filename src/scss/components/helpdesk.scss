@@ -1,6 +1,10 @@
 .block-page-helpdesk {
   padding-bottom: 1.5rem;
   margin-top: 11rem;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   .helpdesk {
     &__items-wrapper {
       margin-top: 1rem;

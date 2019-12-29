@@ -19,6 +19,7 @@ class Functions {
         register_nav_menu( 'secondary', 'Secondary menu' );
         add_theme_support( 'custom-logo');
         add_theme_support( 'post-thumbnails' );
+        add_post_type_support('page', 'editor');
     }
 
     public function add_actions() {
@@ -301,3 +302,25 @@ function itcompany_socials_options() {
 	echo 'Just paste and save :)';
 }
 
+function remove_editor() {
+    if (isset($_GET['post'])) {
+        $id = $_GET['post'];
+        $template = get_post_meta($id, '_wp_page_template', true);
+        switch ($template) {
+			case 'page-templates/page-home.php':
+            remove_post_type_support('page', 'editor');
+            break;
+            default :
+            // Don't remove any other template.
+            break;
+        }
+    }
+}
+add_action('init', 'remove_editor');
+
+
+// Move Yoast to bottom
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');

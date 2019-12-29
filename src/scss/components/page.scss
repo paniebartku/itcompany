@@ -1,6 +1,18 @@
 .block-page {
   padding-bottom: 3rem;
   margin-top: 10rem;
+  @media (max-width: 991px) {
+    margin-top: 9rem;
+  }
+  @media (max-width: 767px) {
+    margin-top: 7rem;
+  }
+  @media (max-width: 600px) {
+    margin-top: 5rem;
+  }
+  @media (max-width: 420px) {
+    margin-top: 5.5rem;
+  }
 }
 .blog__item {
   margin-bottom: 2rem;
@@ -42,6 +54,9 @@
       padding-left: 2rem;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
+      @media (max-width: 767px) {
+        margin-left: auto;
+      }
     }
     p {
       font-size: 1.3rem;
@@ -61,6 +76,9 @@
       margin-top: 2rem;
       position: relative;
       z-index: 2;
+      @media (max-width: 767px) {
+        margin-left: auto;
+      }
     }
     .first__title {
       position: relative;

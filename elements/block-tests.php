@@ -3,11 +3,18 @@
         <div class="row block-tests__demo">
             <div class="col-lg-6">
                 <div class="block-tests__info block-tests__animationL">
-                    <h2>Wersja demo systemu enova365</h2>
-                    <p>Przetestuj produkt enova365 i poznaj jego możliwości</p>
+                    <?php $demoHeader = get_field('demo_header');
+                    if(!empty($demoHeader)){
+                        echo "<h2>".$demoHeader."</h2>" ;
+                    }?>
+                      <?php $demoDescription = get_field('demo_description');
+                    if(!empty($demoDescription)){
+                        echo "<p>".$demoDescription."</p>" ;
+                    }?>
                     <div class="block-tests__content block-tests__animationL">
                     <div class="content__image">
-                        <img src="<?php echo get_template_directory_uri();?>/src/img/demo.png"/>
+                        <?php $demoImg = get_field('demo_img'); ?>
+                        <img src="<?php echo $demoImg['url']?>"/>
                     </div>
                     
                     <div class="content__button">
@@ -20,8 +27,14 @@
             </div>
             <div class="col-lg-6 ">
                 <div class="block-tests__content block-tests__animationR">
-                    <h2>Umów bezpłatną prezentację</h2>
-                    <p>Lorem ipsum</p>
+                    <?php $formHeader = get_field('form_header');
+                        if(!empty($formHeader)){
+                            echo "<h2>".$formHeader."</h2>" ;
+                        }?>
+                     <?php $formDescription = get_field('form_description');
+                    if(!empty($formDescription)){
+                        echo "<p>".$formDescription."</p>" ;
+                    }?>
                 </div>
                 <div class="block-tests__info block-tests__animationR">
                     <div class="content__icon">

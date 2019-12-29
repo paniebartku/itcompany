@@ -1,7 +1,13 @@
+<?php $isActive = get_field('carousel_isactive'); 
+    if($isActive === true){
+?>
 <section class="block-logos-slider">
 <div class="container">
         <div class="row block-logos-slider__header">
-            <h2>Nasi klienci</h2>
+        <?php $carouselHeader = get_field('carousel_header');
+                        if(!empty($carouselHeader)){
+                            echo "<h2>".$carouselHeader."</h2>" ;
+                        }?>
         </div>
         <div class="row block-logos-slider__content glide">
         <div data-glide-el="track" class="glide__track" >
@@ -28,3 +34,4 @@
     </div> 
 
 </section>
+<?php  } ?>

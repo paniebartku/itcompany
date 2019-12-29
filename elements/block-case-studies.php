@@ -4,8 +4,10 @@
 
 <div class="row block-cs__header">
   
-        <h2>Referencje</h2>
-
+<?php $referenceHeader = get_field('reference_header');
+         if(!empty($referenceHeader)){
+            echo "<h2>".$referenceHeader."</h2>" ;
+         }?>
 
 </div>
     <div class="row block-cs__loop">

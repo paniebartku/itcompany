@@ -11,6 +11,20 @@ import sameHeight from "./js/sameHeight.js";
 import addClasses from "./js/addClasses";
 import viewportAction from "./js/viewportAction";
 import Glide from "@glidejs/glide";
+import Swiper from "swiper";
+import "swiper/css/swiper.css";
+var swiper = new Swiper(".swiper-container", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+});
 
 const logos = document.querySelectorAll(".glide");
 
@@ -24,12 +38,12 @@ for (let i = 0; i < logos.length; i++) {
     startAt: 0,
     breakpoints: {
       767: {
-        perView: 3
+        perView: 3,
       },
       420: {
-        perView: 1
-      }
-    }
+        perView: 1,
+      },
+    },
   });
 
   glide.mount();
@@ -52,3 +66,21 @@ $(document).on("shown.bs.modal", ".modal", function() {
     .find("[autofocus]")
     .focus();
 });
+$(".alignright")
+  .parent("p")
+  .css("display", "flex");
+$(".alignright")
+  .parent("p")
+  .css("justify-content", "right");
+$(".alignleft")
+  .parent("p")
+  .css("display", "flex");
+$(".alignleft")
+  .parent("p")
+  .css("justify-content", "left");
+$(".aligncenter")
+  .parent("p")
+  .css("display", "flex");
+$(".aligncenter")
+  .parent("p")
+  .css("justify-content", "center");
