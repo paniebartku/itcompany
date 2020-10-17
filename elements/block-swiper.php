@@ -17,16 +17,21 @@ $query = new WP_Query( $args );
       ?>
       <div class="swiper-slide" style="background-image: url('<?php echo $image[0]; ?>');" >
 
-      <div class="container">
+      <div class="container swiper__inside">
                             <div class="row justify-content-center">
                                 <div class="col-lg-10">
-                            
-                                        
+                                        <?php 
+                                        $sliderTitle =  get_field('slider_title');
+                                        $sliderDescription =  get_field('slider_description');
+                                        $sliderLink = get_field('slider_link');
+                                        ?>
+                                        <?php if(!empty($sliderTitle)): ?>
                                         <div class="swiper-slide--view__title">
-                                            <h2><?php echo get_field('slider_title'); ?></h2>
-                                            <p>Lorem ipsum dolor sit amet</p>
-                                            <a href="<?php echo get_field('slider_link') ?>" class="button button--slider">Zobacz</a>
+                                            <h2><?php echo $sliderTitle; ?></h2>
+                                            <p><?php echo $sliderDescription; ?></p>
+                                            <a href="<?php echo $sliderLink['url'];?>" class="button button--slider"><?php echo $sliderLink['title']; ?></a>
                                         </div>
+                                        <?php endif; ?>
                             </div>
                             </div>
               
