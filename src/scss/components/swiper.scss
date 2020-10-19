@@ -2,6 +2,16 @@
   width: 100%;
   height: 100%;
 }
+.swiper__inside {
+  position: absolute;
+  top: 35%;
+  @media (max-width: 991px) {
+    top: 22%;
+  }
+  @media (max-width: 767px) {
+    top: 5%;
+  }
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -13,6 +23,7 @@
   background-position: top center;
   white-space: normal;
   background-size: cover;
+  padding-top: 50%;
 }
 .block-swiper {
   padding-top: 141px;
@@ -25,7 +36,7 @@
   @media (max-width: 991px) {
     padding-top: 102px;
   }
-  height: 80vh;
+  // height: 80vh;
   .swiper-slide--view__title {
     display: flex;
     flex-direction: column;
@@ -42,6 +53,9 @@
       font-size: 2.5rem;
       letter-spacing: 1.2px;
       font-weight: 500;
+      @media (max-width: 991px) {
+        font-size: 2rem;
+      }
       @media (max-width: 420px) {
         font-size: 1.5rem;
       }

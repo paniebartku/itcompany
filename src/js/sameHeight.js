@@ -1,6 +1,6 @@
 const sameHeight = (() => {
   const blockquotes = [
-    ...document.querySelectorAll(".block-cs__loop--blockquote")
+    ...document.querySelectorAll(".sameHeightClass")
   ];
   let tallest = 0;
 

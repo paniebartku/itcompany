@@ -32,7 +32,7 @@ for (let i = 0; i < logos.length; i++) {
   let glide = new Glide(logos[i], {
     type: "carousel",
     hoverpause: false,
-    autoplay: 2000,
+    // autoplay: 2000,
     perView: 4,
     gap: 30,
     startAt: 0,

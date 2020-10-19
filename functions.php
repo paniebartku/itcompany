@@ -309,6 +309,8 @@ function remove_editor() {
         switch ($template) {
 			case 'page-templates/page-home.php':
             remove_post_type_support('page', 'editor');
+            case 'page-templates/page-contact.php':
+                remove_post_type_support('page', 'editor');
             break;
             default :
             // Don't remove any other template.

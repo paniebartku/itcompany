@@ -24,7 +24,7 @@
                     do_action('unique_action_tag', $image );
                     ?>
                     </div>
-                    <blockquote class="block-cs__loop--blockquote"><?php echo get_field('cs-excerpt') ?></blockquote>
+                    <blockquote class="block-cs__loop--blockquote sameHeightClass"><?php echo get_field('cs-excerpt') ?></blockquote>
                     <div class="block-cs__loop--author">
                         <span><?php echo get_field('cs-person') ?></span>
                         <span><?php echo get_field('cs-job') ?></span>
