@@ -30,37 +30,22 @@ get_header(); ?>
     <div class="row helpdesk__items-wrapper">
         <div class="col-md-5 col-sm-12 col-12">
                           <div class="helpdesk__item">
-                           <h2><?php echo get_field('helpdesk-title-1');?></h2>
+                           <h4><?php echo get_field('helpdesk-title-1');?></h4>
                                  <div class="helpdesk__image">
                            <?php image_acff(get_field('helpdesk-image-1')); ?> 
                            </div>
                                 <div class="helpdesk__button">
-                                <?php $teamViewer = esc_attr( get_option( 'team_viewer' ) ); ?>
-                                    <a href="<?php echo $teamViewer ?>" class="button button--standard">Pobierz</a>
-                                </div>
-                          </div>
-        </div>
- <div class="offset-md-2 col-md-5 col-sm-12 col-12">
- <div class="helpdesk__item">
-                           <h2><?php echo get_field('helpdesk-title-2');?></h2>
-                                 
-                           <div class="helpdesk__image">
-                           <?php image_acff(get_field('helpdesk-image-2')); ?> 
-                           </div>
-                                <div class="helpdesk__button">
                                 <?php $anyDesk = esc_attr( get_option( 'any_desk' ) ); ?>
-                                    <a href="<?php echo $anyDesk ?>"" class="button button--standard">Pobierz</a>
+                                <a href="<?php echo $anyDesk ?>" class="button button--standard">Pobierz</a>
                                 </div>
                           </div>
         </div>
-
-
-    </div>
-
+        </div>
 
 
 
-    </div>
+
+
     </div>
 </section>
 

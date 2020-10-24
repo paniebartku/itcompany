@@ -24,10 +24,12 @@
 		<?php the_title( sprintf('<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h2>' ); ?>
 
         <div class="content__image">
-			<?php    if( has_post_thumbnail() ):
+			<?php  if (has_post_thumbnail( $post->ID ) ): 
 			
-                    $image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );?>
-					<img class="img-fluid" src="<?php echo $image ?>"/>
+				
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); 
+					?>
+					<img class="img-fluid" src="<?php echo $image[0] ?>"/>
 
 					<?php endif;   ?>           
 		</div>
