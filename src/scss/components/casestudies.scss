@@ -4,9 +4,9 @@
     justify-content: center;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
-    h2 {
-      font-size: 3rem;
-    }
+    // h2 {
+    //   font-size: 3rem;
+    // }
   }
   &__loop {
     &--card {
@@ -17,6 +17,9 @@
     &--image {
       text-align: center;
       margin-bottom: 2rem;
+      //
+    }
+    &--home-page {
       height: 100px;
     }
     blockquote {

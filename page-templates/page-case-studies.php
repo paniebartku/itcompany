@@ -38,7 +38,7 @@ get_header(); ?>
                     <div class="row block-cs__loop"><?php
                    $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 $args = array(
-  'posts_per_page' => 2,
+  'posts_per_page' => 3,
   'paged' => $paged,
   'post_type' => 'case-studies'
 );?>

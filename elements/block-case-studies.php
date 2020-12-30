@@ -18,7 +18,7 @@
             if($featured == true){ ?>
             <div class="col-lg-4">
                 <div class="block-cs__loop--card">
-                    <div class="block-cs__loop--image">
+                    <div class="block-cs__loop--image block-cs__loop--home-page">
                     <?php
                     $image = image_acf(get_field('cs-logo'));
                     do_action('unique_action_tag', $image );

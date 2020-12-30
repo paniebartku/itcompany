@@ -24,14 +24,18 @@ $query = new WP_Query( $args );
                                         $sliderTitle =  get_field('slider_title');
                                         $sliderDescription =  get_field('slider_description');
                                         $sliderLink = get_field('slider_link');
+                                        $sliderLinkDescription = get_field('slider_link_description');
                                         ?>
                                         <?php if(!empty($sliderTitle)): ?>
                                         <div class="swiper-slide--view__title">
                                             <h2><?php echo $sliderTitle; ?></h2>
                                             <p><?php echo $sliderDescription; ?></p>
-                                            <a href="<?php echo $sliderLink['url'];?>" class="button button--slider"><?php echo $sliderLink['title']; ?></a>
+                                            <?php if(!empty($sliderLink)): ?>
+                                            <a href="<?php echo $sliderLink;?>" class="button button--slider"><?php echo $sliderLinkDescription; ?></a>
+                                            <?php endif; ?>
                                         </div>
                                         <?php endif; ?>
+                                     
                             </div>
                             </div>
               

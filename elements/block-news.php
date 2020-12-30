@@ -17,7 +17,7 @@
             <div class="col-lg-8">
        
                 <div class="block-news news__header">
-                    <h2> <?php echo the_title(); ?></h2>
+                    <h3> <?php echo the_title(); ?></h3>
                </div>
                <div class="block-news news__excerpt">
                         <?php echo the_excerpt(); ?>

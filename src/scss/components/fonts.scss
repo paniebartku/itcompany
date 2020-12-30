@@ -1,17 +1,66 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=latin-ext");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=latin-ext");
 
 /* font-family: 'Montserrat', sans-serif; */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// @font-face {
+//   font-family: "Regular";
+//   src: url("../fonts/Montserrat-Regular.eot");
+//   src: local("../fonts/Montserrat Regular");
+//   src: local("../fonts/Montserrat-Regular");
+//   src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+//   src: url("../fonts/Montserrat-Regular.woff") format("woff");
+//   src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+// }
+// @font-face {
+//   font-family: "Medium";
+//   src: url("../fonts/Montserrat-Medium.eot");
+//   src: local("../fonts/Montserrat Medium");
+//   src: local("../fonts/Montserrat-Medium");
+//   src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+//   src: url("../fonts/Montserrat-Medium.woff") format("woff");
+//   src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+// }
+// @font-face {
+//   font-family: "SemiBold";
+//   src: url("../fonts/Montserrat-SemiBold.eot");
+//   src: local("../fonts/Montserrat SemiBold");
+//   src: local("../fonts/Montserrat-SemiBold");
+//   src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+//   src: url("../fonts/Montserrat-SemiBold.woff") format("woff");
+//   src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+// }
+// @font-face {
+//   font-family: "Bold";
+//   src: url("../fonts/Montserrat-Bold.eot");
+//   src: local("../fonts/Montserrat Bold");
+//   src: local("../fonts/Montserrat-Bold");
+//   src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+//   src: url("../fonts/Montserrat-Bold.woff") format("woff");
+//   src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+// }
 h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: "Montserrat", sans-serif;
+h5,
+h6 {
+  font-family: "Monserrat", sans-serif;
 }
 p {
   line-height: 1.8;
+  // font-family: "Regular", sans-serif;
+}
+body {
+  font-family: "Monserrat", sans-serif;
+}
+b,
+strong {
+  font-weight: bolder;
 }
 h1 {
-  font-size: 1.9rem;
+  font-size: 2.1rem;
 }

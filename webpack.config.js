@@ -55,8 +55,18 @@ module.exports = {
           }
         ]
       },
-      // compile all .scss files to plain old css
-
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]",
+              outputPath: "",
+            },
+          },
+        ],
+      },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [

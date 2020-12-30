@@ -4,7 +4,7 @@
   background: white;
   padding: 0.5rem 2.46rem 0 0;
   font-size: 12px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.0325em;
   padding-bottom: 1rem;
   @media (max-width: 420px) {
@@ -50,6 +50,7 @@
   }
   &-brand {
     margin-top: -3rem;
+    margin-right: 0;
     @media (max-width: 1260px) {
       img {
         max-width: 80%;
@@ -116,7 +117,7 @@
   }
 }
 #navbarText {
-  margin-left: 3rem;
+  margin-left: 1rem;
   margin-top: -2rem;
   justify-content: space-between;
   @media (max-width: 1260px) {

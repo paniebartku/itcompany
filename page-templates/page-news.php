@@ -39,7 +39,7 @@ get_header(); ?>
                         <?php }else { ?>
                         	<div class="blog__item--older" >
 							
-							<?php the_title( sprintf('<h1 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
+							<?php the_title( sprintf('<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h2>' ); ?>
 							<img class="img-fluid" src="<?php echo $image ?>"/>
 							<?php the_excerpt(); ?>
 							<div class="older__readmore">

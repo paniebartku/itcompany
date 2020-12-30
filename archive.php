@@ -7,8 +7,8 @@
 				<?php if( have_posts() ): ?>
 		<div class="block-archive__header">
 				<?php 
-					the_archive_title('<h1 class="">', '</h1>');
-					the_archive_description('<div class="">', '</div>');
+					the_archive_title('<h1>', '</h1>');
+					the_archive_description('<div>', '</div>');
 				?>
 		</div>
 		</div>

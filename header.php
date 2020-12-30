@@ -7,6 +7,14 @@
     <title><?php bloginfo();?></title>
 
     <?php wp_head(); ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Monserrat']
+    }
+  });
+</script>
 </head>
 <body>
 <header class="fixed-top ">

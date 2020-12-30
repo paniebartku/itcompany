@@ -4,12 +4,12 @@
 }
 .swiper__inside {
   position: absolute;
-  top: 35%;
+  top: 17%;
   @media (max-width: 991px) {
-    top: 22%;
+    top: 5%;
   }
   @media (max-width: 767px) {
-    top: 5%;
+    top: 0;
   }
 }
 .swiper-slide {
@@ -20,10 +20,14 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-position: top center;
+  // background-position: top center;
+  background-position-y: 50%;
   white-space: normal;
   background-size: cover;
-  padding-top: 50%;
+  padding-top: 30%;
+  @media (max-width: 767px) {
+    padding-top: 50%;
+  }
 }
 .block-swiper {
   padding-top: 141px;
@@ -34,29 +38,41 @@
     padding-top: 114px;
   }
   @media (max-width: 991px) {
-    padding-top: 102px;
+    padding-top: 89px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 53px;
   }
   // height: 80vh;
+
   .swiper-slide--view__title {
+    &.swiper-slide--nobg {
+      background-color: transparent;
+      margin-top: 20%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
     @media (max-width: 767px) {
-      margin-top: 6%;
+      margin-top: 16%;
     }
     background-color: rgba(0, 0, 0, 0.3);
     padding: 2rem;
     // height: 100%;
     color: white;
+    @media (max-width: 600px) {
+      display: none;
+    }
     h2 {
       font-size: 2.5rem;
       letter-spacing: 1.2px;
       font-weight: 500;
+      font-family: "Montserrat", sans-serif;
       @media (max-width: 991px) {
         font-size: 2rem;
       }
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         font-size: 1.5rem;
       }
     }
@@ -87,9 +103,9 @@
     &:hover {
       color: $itGreen;
     }
-    @media (max-width: 400px) {
-      top: 90%;
-    }
+    // @media (max-width: 400px) {
+    //   top: 90%;
+    // }
     &::after {
       font-size: 74px;
       @media (max-width: 991px) {
@@ -104,9 +120,9 @@
     @media (max-width: 1333px) {
       left: 3vw;
     }
-    @media (max-width: 400px) {
-      left: 30vw;
-    }
+    // @media (max-width: 400px) {
+    //   left: 30vw;
+    // }
   }
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
@@ -115,8 +131,8 @@
     @media (max-width: 1333px) {
       right: 3vw;
     }
-    @media (max-width: 400px) {
-      right: 30vw;
-    }
+    // @media (max-width: 400px) {
+    //   right: 30vw;
+    // }
   }
 }
