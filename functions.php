@@ -20,7 +20,7 @@ class Functions {
         add_theme_support( 'custom-logo');
         add_theme_support( 'post-thumbnails' );
         add_post_type_support('page', 'editor');
-        add_image_size( 'custom-size', 400, 200, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
+        add_image_size( 'custom-size', 540, 300, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
     }
 
     public function add_actions() {
@@ -45,8 +45,8 @@ class Functions {
     }
 
     public function load_scripts_and_styles() {
-        wp_enqueue_style('itcompany_css', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.1.0', 'all');
-        wp_enqueue_script('itcompany_js', get_template_directory_uri() . '/dist/dist.min.js', array('jquery'),  '1.1.0', true);
+        wp_enqueue_style('itcompany_css', get_template_directory_uri() . '/dist/dist.min.css', array(), '1.1.2', 'all');
+        wp_enqueue_script('itcompany_js', get_template_directory_uri() . '/dist/dist.min.js', array('jquery'),  '1.1.2', true);
     }
 
     public function home_page_slider_post_type(){

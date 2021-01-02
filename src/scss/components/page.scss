@@ -1,6 +1,7 @@
 .block-page {
   padding-bottom: 3rem;
   margin-top: 10rem;
+  min-height: 50vh;
   @media (max-width: 991px) {
     margin-top: 9rem;
   }
@@ -26,6 +27,8 @@
     margin-top: 30px;
     transition: all 0.4s ease-in-out;
     background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     &::before {
       transition: all 0.4s ease-in-out;
       content: "";
@@ -102,7 +105,8 @@
       }
     }
     p {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
     small {
       text-align: right;
@@ -140,4 +144,7 @@ ol > li::before {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   content: counter(item) ".";
+}
+.entry-title {
+  margin-bottom: 1.5rem;
 }

@@ -5,14 +5,23 @@ import "bootstrap/js/dist/util";
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
 import "bootstrap/js/dist/modal";
-import slider from "./js/slider.js";
+// import slider from "./js/slider.js";
 import scrollToTop from "./js/scrollToTop.js";
 import sameHeight from "./js/sameHeight.js";
 import addClasses from "./js/addClasses";
-import viewportAction from "./js/viewportAction";
+// import viewportAction from "./js/viewportAction";
 import Glide from "@glidejs/glide";
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+if (AOS != undefined) {
+  AOS.init({
+    delay: 0,
+    duration: 800,
+    once: true,
+  });
+}
 var swiper = new Swiper(".swiper-container", {
   loop: true,
   navigation: {
@@ -54,12 +63,6 @@ import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
 
 ("use strict");
-
-(function($) {
-  $(function() {
-    console.log("So it begins");
-  });
-})(jQuery);
 
 $(document).on("shown.bs.modal", ".modal", function() {
   $(this)

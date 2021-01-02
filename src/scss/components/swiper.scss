@@ -24,7 +24,7 @@
   background-position-y: 50%;
   white-space: normal;
   background-size: cover;
-  padding-top: 30%;
+  padding-top: 31%;
   @media (max-width: 767px) {
     padding-top: 50%;
   }
@@ -43,8 +43,6 @@
   @media (max-width: 600px) {
     padding-top: 53px;
   }
-  // height: 80vh;
-
   .swiper-slide--view__title {
     &.swiper-slide--nobg {
       background-color: transparent;

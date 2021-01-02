@@ -1,6 +1,7 @@
 .block-single {
   padding-bottom: 3rem;
   margin-top: 10rem;
+  min-height: 50vh;
   @media (max-width: 991px) {
     margin-top: 9rem;
   }

@@ -23,8 +23,9 @@ get_header(); ?>
 				?>
 				
 					<div class="col-sm-<?php echo $column; echo $class; ?> blog__item">
-						<?php if( has_post_thumbnail() ):
-							$image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+						<?php if( has_post_thumbnail($post->ID) ):
+							$image = wp_get_attachment_url( get_post_thumbnail_id( ( $post->ID ), 'full' ) );
+
 						endif; ?>
                         <?php if($i === 0){?>
 						<div class="blog__item--first" style="background-image: url(<?php echo $image; ?>);">
@@ -40,8 +41,8 @@ get_header(); ?>
                         	<div class="blog__item--older" >
 							
 							<?php the_title( sprintf('<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h2>' ); ?>
-							<img class="img-fluid" src="<?php echo $image ?>"/>
-							<?php the_excerpt(); ?>
+							<?php echo get_the_post_thumbnail( $post_id, 'custom-size' ); ?>												
+									<?php the_excerpt(); ?>
 							<div class="older__readmore">
 								<a class="button--slider" href="<?php echo the_permalink(); ?>">Więcej</a>
 							</div>

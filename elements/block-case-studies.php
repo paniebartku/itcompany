@@ -13,10 +13,12 @@
     <div class="row block-cs__loop">
     <?php $loop = new WP_Query( array( 'post_type' => 'case-studies'));
         if ( $loop->have_posts() ) :
+            $delay = 50; 
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php $featured = get_field('featured_post');
             if($featured == true){ ?>
-            <div class="col-lg-4">
+            
+            <div class="col-lg-4" data-aos="fade-in" data-aos-delay="<?php echo $delay; ?>">
                 <div class="block-cs__loop--card">
                     <div class="block-cs__loop--image block-cs__loop--home-page">
                     <?php
@@ -36,7 +38,7 @@
             </div>
             <?php } ?>
           
-        <?php endwhile; 
+        <?php $delay+=50; endwhile; 
        endif;
    wp_reset_postdata();
 ?>

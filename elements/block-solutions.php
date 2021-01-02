@@ -15,7 +15,8 @@
                 </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 block-solutions__card">
+            <div class="col-lg-4 block-solutions__card" data-aos="fade-up"  data-aos-offset="200"
+    data-aos-delay="50">
                 <a href = "<?php echo get_field("solutions_link_1") ?>">
                 <div class="figure-box">
                     <figure>
@@ -29,7 +30,8 @@
                 </a>
             <h4><?php echo get_field('solutions_name_1') ?></h4>    
             </div>
-            <div class="col-lg-4 block-solutions__card">
+            <div class="col-lg-4 block-solutions__card" data-aos="fade-up"  data-aos-offset="200"
+    data-aos-delay="150">
 
             <a href = "<?php echo get_field("solutions_link_2") ?>">
             <div class="figure-box">
@@ -46,7 +48,8 @@
             <h4><?php echo get_field('solutions_name_2') ?></h4>    
             </div>
 
-            <div class="col-lg-4 block-solutions__card">
+            <div class="col-lg-4 block-solutions__card" data-aos="fade-up"  data-aos-offset="200"
+    data-aos-delay="250">
             <a href = "<?php echo get_field("solutions_link_3") ?>">
             <div class="figure-box">
                     <figure>
